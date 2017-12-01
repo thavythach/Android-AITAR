@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Android\AndroidStudioProjects\vuforia-sdk-android-6-5-25\build\java\vuforia\Vuforia.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="283d6ac2f86c238de775f6d1f039aecdd6a5fa67">
+        <dex dex="C:\Android\AndroidStudioProjects\vuforia-sdk-android-6-5-25\samples\VuforiaSamples-6-5-25\app\build\intermediates\pre-dexed\debug\Vuforia_b0b2993e604d1319af42138d94310cf42896795c.jar" />
+    </item>
+
+</items>

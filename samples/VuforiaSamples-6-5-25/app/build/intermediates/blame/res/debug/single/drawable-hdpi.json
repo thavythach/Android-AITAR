@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Android\\AndroidStudioProjects\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon.png",
+        "source": "C:\\Android\\AndroidStudioProjects\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon.png",
+        "source": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\vuforia-samples-core-android-6-5-25\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.png",
+        "source": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\vuforia-samples-core-android-6-5-25\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.png",
+        "source": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\vuforia-samples-core-android-6-5-25\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon.png",
+        "source": "C:\\Android\\vuforia-sdk-android-6-5-25\\samples\\vuforia-samples-core-android-6-5-25\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\AndroidStudioProjects\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.png",
+        "source": "C:\\Android\\AndroidStudioProjects\\vuforia-sdk-android-6-5-25\\samples\\VuforiaSamples-6-5-25\\app\\src\\main\\res\\drawable-hdpi\\logo.png"
+    }
+]
