@@ -29,13 +29,11 @@ public class SampleApplicationException extends Exception
     private String mString = "";
     
     
-    public SampleApplicationException(int code, String description)
-    {
+    public SampleApplicationException(int code, String description) {
         super(description);
         mCode = code;
         mString = description;
     }
-    
     
     public int getCode()
     {

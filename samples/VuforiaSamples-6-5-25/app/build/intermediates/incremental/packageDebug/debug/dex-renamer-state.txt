@@ -1,0 +1,4 @@
+#Fri Dec 01 12:15:30 CET 2017
+base.0=C\:\\Users\\Thavy Thach\\aitdroid\\android-peterAR\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\Thavy Thach\\aitdroid\\android-peterAR\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

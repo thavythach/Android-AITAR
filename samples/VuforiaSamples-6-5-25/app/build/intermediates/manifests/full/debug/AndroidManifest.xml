@@ -57,10 +57,12 @@
     -->
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:description="@string/app_description"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:launchMode="singleTask"
+        android:testOnly="true"
         android:theme="@style/SampleAppsTheme" >
 
         <!--
@@ -150,6 +152,12 @@
         </activity>
         <activity
             android:name="com.vuforia.samples.VuforiaSamples.app.ObjectRecognition.ObjectTargets"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/SampleAppsTheme" >
+        </activity>
+        <activity
+            android:name="com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:launchMode="singleTask"
             android:theme="@style/SampleAppsTheme" >

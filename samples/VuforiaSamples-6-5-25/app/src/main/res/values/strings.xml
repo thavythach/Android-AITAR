@@ -66,6 +66,6 @@
     <string name="menu_button_yellow">Yellow</string>
     <string name="menu_button_green">Green</string>
         
-    <string name="splash_screen_description">Vuforia Splash</string>
+    <string name="splash_screen_description">TapAR</string>
     
 </resources>
