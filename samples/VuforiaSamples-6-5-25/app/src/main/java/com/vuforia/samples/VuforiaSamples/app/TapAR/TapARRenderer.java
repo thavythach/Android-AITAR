@@ -84,8 +84,10 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     private static final float VUMARK_SCALE = 1.02f;
     private String currentVumarkIdOnCard;
 
-    // coordinates of health bar line
-    static float HB_COORDS[] =  {-0.6f, 0.6f, 3.0f};
+    // attributes of health bar line
+    static float HB_ORIGIN[] = {0.0f, 3.0f};
+    static float HB_LENGTH = 1.2f;
+    static float HB_WIDTH = 0.2f;
 
     public TapARRenderer(TapAR activity,
                           SampleApplicationSession session)
@@ -335,28 +337,35 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
 
                     GLES20.glUseProgram(hbShaderProgramID);
 
-                    float hbVertices[] = new float[6];
-                    hbVertices[0] = HB_COORDS[0];
-                    hbVertices[1] = HB_COORDS[2];
+                    float hbVertices[] = new float[12];
+                    hbVertices[0] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    hbVertices[1] = HB_ORIGIN[1] - HB_WIDTH/2;
                     hbVertices[2] = 0.0f;
-                    hbVertices[3] = HB_COORDS[1];
-                    hbVertices[4] = HB_COORDS[2];
+                    hbVertices[3] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[4] = HB_ORIGIN[1] - HB_WIDTH/2;
                     hbVertices[5] = 0.0f;
+                    hbVertices[6] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[7] = HB_ORIGIN[1] + HB_WIDTH/2;
+                    hbVertices[8] = 0.0f;
+                    hbVertices[9] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    hbVertices[10] = HB_ORIGIN[1] + HB_WIDTH/2;
+                    hbVertices[11] = 0.0f;
 
                     GLES20.glVertexAttribPointer(hbVertexHandle, 3,
                             GLES20.GL_FLOAT, false, 0, fillBuffer(hbVertices));
 
                     GLES20.glEnableVertexAttribArray(hbVertexHandle);
 
-                    GLES20.glUniform1f(lineOpacityHandle, 0.8f);
+                    // set opacity and color of health bar
+                    GLES20.glUniform1f(lineOpacityHandle, 0.7f);
                     GLES20.glUniform3f(lineColorHandle, 0.0f, 1.0f, 0.0f);
 
                     GLES20.glUniformMatrix4fv(hbMvpMatrixHandle, 1, false,
                             modelViewProjection, 0);
 
-                    GLES20.glDrawArrays(GLES20.GL_LINES, 0, 2);
+                    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 4);
 
-                    SampleUtils.checkGLError("VirtualButtons drawButton");
+                    SampleUtils.checkGLError("Draw Health Bar");
 
                     GLES20.glDisableVertexAttribArray(hbVertexHandle);
 

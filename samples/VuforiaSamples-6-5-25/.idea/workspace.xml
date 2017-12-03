@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -41,54 +42,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ImageTargets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/ImageTargets/ImageTargets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8969">
-              <caret line="833" column="40" lean-forward="false" selection-start-line="833" selection-start-column="40" selection-end-line="833" selection-end-column="40" />
-              <folding>
-                <element signature="e#26717#26718#0" expanded="true" />
-                <element signature="e#26786#26787#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Teapot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/SampleApplication/utils/Teapot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TapARRenderer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TapARRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapARRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+            <state relative-caret-position="112">
+              <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineShaders.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/SampleApplication/utils/LineShaders.java">
+      <file leaf-file-name="Plane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            <state relative-caret-position="-21">
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VirtualButtonRenderer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/VirtualButtons/VirtualButtonRenderer.java">
+      <file leaf-file-name="TapAR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapAR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="328" column="44" lean-forward="false" selection-start-line="328" selection-start-column="39" selection-end-line="328" selection-end-column="44" />
+            <state relative-caret-position="-1453">
+              <caret line="311" column="17" lean-forward="false" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -130,6 +108,9 @@
       <find>linecolor</find>
       <find>color</find>
       <find>modelviewpro</find>
+      <find>virtual</find>
+      <find>health bar</find>
+      <find>buffer</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2295,7 +2276,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512313763987" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512317279908" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2343,7 +2324,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512313763988" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512317279908" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2526,7 +2507,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512313764072" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512317279915" />
       </method>
     </configuration>
     <list size="1">
@@ -2569,8 +2550,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6134185" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2581,12 +2563,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2912,14 +2894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/Plane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/TapAR/TapAR_about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
@@ -2931,25 +2905,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/vumark_texture.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/ImageTargets/ImageTargets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8969">
-          <caret line="833" column="40" lean-forward="false" selection-start-line="833" selection-start-column="40" selection-end-line="833" selection-end-column="40" />
-          <folding>
-            <element signature="e#26717#26718#0" expanded="true" />
-            <element signature="e#26786#26787#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapAR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="311" column="17" lean-forward="false" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="17" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/VuMark/Plane.java">
@@ -2992,11 +2947,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/SampleApplication/utils/CubeShaders.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/VirtualButtons/VirtualButtonRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="328" column="44" lean-forward="false" selection-start-line="328" selection-start-column="39" selection-end-line="328" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/ImageTargets/ImageTargets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8746">
+          <caret line="833" column="40" lean-forward="false" selection-start-line="833" selection-start-column="40" selection-end-line="833" selection-end-column="40" />
+          <folding>
+            <element signature="e#26717#26718#0" expanded="true" />
+            <element signature="e#26786#26787#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3008,18 +2974,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/VirtualButtons/VirtualButtonRenderer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/SampleApplication/utils/CubeShaders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="328" column="44" lean-forward="false" selection-start-line="328" selection-start-column="39" selection-end-line="328" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapARRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+        <state relative-caret-position="72">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -3027,7 +2985,31 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/SampleApplication/utils/LineShaders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapAR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1453">
+          <caret line="311" column="17" lean-forward="false" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/VuforiaSamples/app/TapAR/TapARRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
           <folding />
         </state>
       </provider>
