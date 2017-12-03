@@ -45,8 +45,7 @@ public class ActivityLauncher extends ListActivity
         setContentView(R.layout.activities_list);
         setListAdapter(adapter);
     }
-    
-    
+
     @Override
     public void onListItemClick(ListView l, View v, int position, long id)
     {

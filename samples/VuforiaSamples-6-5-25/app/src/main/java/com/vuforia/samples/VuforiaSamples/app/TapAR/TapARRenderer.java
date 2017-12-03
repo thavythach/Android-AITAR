@@ -29,6 +29,7 @@ import com.vuforia.samples.SampleApplication.SampleAppRenderer;
 import com.vuforia.samples.SampleApplication.SampleAppRendererControl;
 import com.vuforia.samples.SampleApplication.SampleApplicationSession;
 import com.vuforia.samples.SampleApplication.utils.CubeShaders;
+import com.vuforia.samples.SampleApplication.utils.LineShaders;
 import com.vuforia.samples.SampleApplication.utils.LoadingDialogHandler;
 import com.vuforia.samples.SampleApplication.utils.SampleUtils;
 import com.vuforia.samples.SampleApplication.utils.Texture;
@@ -36,7 +37,9 @@ import com.vuforia.samples.VuforiaSamples.app.TapAR.Plane;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 
 import java.math.BigInteger;
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 import java.util.Vector;
 
@@ -63,6 +66,12 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     private int texSampler2DHandle;
     private int calphaHandle;
 
+    private int hbShaderProgramID = 0;
+    private int hbVertexHandle = 0;
+    private int hbMvpMatrixHandle = 0;
+    private int lineOpacityHandle = 0;
+    private int lineColorHandle = 0;
+
     private Renderer mRenderer;
 
     private double t0;
@@ -74,6 +83,9 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     // ratio to apply so that the augmentation surrounds the vumark
     private static final float VUMARK_SCALE = 1.02f;
     private String currentVumarkIdOnCard;
+
+    // coordinates of health bar line
+    static float HB_COORDS[] =  {-0.6f, 0.6f, 3.0f};
 
     public TapARRenderer(TapAR activity,
                           SampleApplicationSession session)
@@ -176,6 +188,18 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                 "texSampler2D");
         calphaHandle = GLES20.glGetUniformLocation(shaderProgramID,
                 "calpha");
+
+        hbShaderProgramID = SampleUtils.createProgramFromShaderSrc(
+                LineShaders.LINE_VERTEX_SHADER, LineShaders.LINE_FRAGMENT_SHADER);
+
+        hbMvpMatrixHandle = GLES20.glGetUniformLocation(hbShaderProgramID,
+                "modelViewProjectionMatrix");
+        hbVertexHandle = GLES20.glGetAttribLocation(hbShaderProgramID,
+                "vertexPosition");
+        lineOpacityHandle = GLES20.glGetUniformLocation(hbShaderProgramID,
+                "opacity");
+        lineColorHandle = GLES20.glGetUniformLocation(hbShaderProgramID,
+                "color");
 
         // Hide the Loading Dialog
         mActivity.loadingDialogHandler
@@ -280,26 +304,6 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                 // render an OpenGL object on top of the contour.
                 String userData = vmTmp.getVuMarkUserData();
 
-
-                InstanceId instanceId = vmTgt.getInstanceId();
-                boolean isMainVuMark = ((indexVuMarkToDisplay < 0) ||
-                        (indexVuMarkToDisplay == tIdx));
-                gotVuMark = true;
-
-                if (isMainVuMark) {
-                    markerValue = instanceIdToValue(instanceId);
-                    markerType = instanceIdToType(instanceId);
-                    Image instanceImage = vmTgt.getInstanceImage();
-                    markerBitmap = getBitMapFromImage(instanceImage);
-
-                    if (! markerValue.equalsIgnoreCase(currentVumarkIdOnCard))
-                    {
-                        mActivity.hideCard();
-                        blinkVumark(true);
-                    }
-                }
-                int textureIndex = 0;
-
                 // deal with the modelview and projection matrices
                 float[] modelViewProjection = new float[16];
 
@@ -317,6 +321,52 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                         vumarkHeight * VUMARK_SCALE, 1.0f);
 
                 Matrix.multiplyMM(modelViewProjection, 0, projectionMatrix, 0, modelViewMatrix, 0);
+
+                InstanceId instanceId = vmTgt.getInstanceId();
+                boolean isMainVuMark = ((indexVuMarkToDisplay < 0) ||
+                        (indexVuMarkToDisplay == tIdx));
+                gotVuMark = true;
+
+                if (isMainVuMark) {
+                    markerValue = instanceIdToValue(instanceId);
+                    markerType = instanceIdToType(instanceId);
+                    Image instanceImage = vmTgt.getInstanceImage();
+                    markerBitmap = getBitMapFromImage(instanceImage);
+
+                    GLES20.glUseProgram(hbShaderProgramID);
+
+                    float hbVertices[] = new float[6];
+                    hbVertices[0] = HB_COORDS[0];
+                    hbVertices[1] = HB_COORDS[2];
+                    hbVertices[2] = 0.0f;
+                    hbVertices[3] = HB_COORDS[1];
+                    hbVertices[4] = HB_COORDS[2];
+                    hbVertices[5] = 0.0f;
+
+                    GLES20.glVertexAttribPointer(hbVertexHandle, 3,
+                            GLES20.GL_FLOAT, false, 0, fillBuffer(hbVertices));
+
+                    GLES20.glEnableVertexAttribArray(hbVertexHandle);
+
+                    GLES20.glUniform1f(lineOpacityHandle, 0.8f);
+                    GLES20.glUniform3f(lineColorHandle, 0.0f, 1.0f, 0.0f);
+
+                    GLES20.glUniformMatrix4fv(hbMvpMatrixHandle, 1, false,
+                            modelViewProjection, 0);
+
+                    GLES20.glDrawArrays(GLES20.GL_LINES, 0, 2);
+
+                    SampleUtils.checkGLError("VirtualButtons drawButton");
+
+                    GLES20.glDisableVertexAttribArray(hbVertexHandle);
+
+                    if (! markerValue.equalsIgnoreCase(currentVumarkIdOnCard))
+                    {
+                        mActivity.hideCard();
+                        blinkVumark(true);
+                    }
+                }
+                int textureIndex = 0;
 
                 // activate the shader program and bind the vertex/normal/tex coords
                 GLES20.glUseProgram(shaderProgramID);
@@ -379,6 +429,22 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     {
         return (float) (Math.pow(p1.getData()[0] - p2.getData()[0], 2.0) +
                 Math.pow(p1.getData()[1] - p2.getData()[1], 2.0));
+    }
+
+    private Buffer fillBuffer(float[] array)
+    {
+        // Convert to floats because OpenGL doesnt work on doubles, and manually
+        // casting each input value would take too much time.
+        ByteBuffer bb = ByteBuffer.allocateDirect(4 * array.length); // each
+        // float
+        // takes 4
+        // bytes
+        bb.order(ByteOrder.LITTLE_ENDIAN);
+        for (float d : array)
+            bb.putFloat(d);
+        bb.rewind();
+
+        return bb;
     }
 
     public void setTextures(Vector<Texture> textures)
