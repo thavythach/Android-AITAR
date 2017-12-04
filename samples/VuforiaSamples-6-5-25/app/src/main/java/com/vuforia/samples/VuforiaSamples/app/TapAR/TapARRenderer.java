@@ -6,6 +6,8 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.widget.RelativeLayout;
 
 import com.vuforia.CameraCalibration;
 import com.vuforia.CameraDevice;
@@ -32,9 +34,12 @@ import com.vuforia.samples.SampleApplication.utils.CubeShaders;
 import com.vuforia.samples.SampleApplication.utils.LineShaders;
 import com.vuforia.samples.SampleApplication.utils.LoadingDialogHandler;
 import com.vuforia.samples.SampleApplication.utils.SampleUtils;
+import com.vuforia.samples.SampleApplication.utils.Teapot;
 import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.Plane;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
+import com.vuforia.samples.VuforiaSamples.app.VirtualButtons.VirtualButtonRenderer;
+import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenu;
 
 import java.math.BigInteger;
 import java.nio.Buffer;
@@ -59,6 +64,8 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     private TapAR mActivity;
 
     private Vector<Texture> mTextures;
+
+    // frame marker
     private int shaderProgramID;
     private int vertexHandle;
     private int textureCoordHandle;
@@ -66,11 +73,36 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     private int texSampler2DHandle;
     private int calphaHandle;
 
+    // OpenGL ES 2.0 specific (Healthbar):
     private int hbShaderProgramID = 0;
     private int hbVertexHandle = 0;
     private int hbMvpMatrixHandle = 0;
     private int lineOpacityHandle = 0;
     private int lineColorHandle = 0;
+
+    // OpenGL ES 2.0 specific (Teapot):
+    private int tshaderProgramID = 0;
+    private int tvertexHandle = 0;
+    private int ttextureCoordHandle = 0;
+    private int tmvpMatrixHandle = 0;
+    private int ttexSampler2DHandle = 0;
+    private int tlineOpacityHandle = 0;
+    private int tlineColorHandle = 0;
+    private int tmvpMatrixButtonsHandle = 0;
+
+    // OpenGL ES 2.0 specific (Virtual Buttons):
+    private int vbShaderProgramID = 0;
+    private int vbVertexHandle = 0;
+
+    // Constants:
+    static private float kTeapotScale = 0.003f;
+
+    // Define the coordinates of the virtual buttons to render the area of action,
+    // this values are the same as the wood dataset
+    static private float RED_VB_BUTTON[] =  {-0.10868f, -0.05352f, -0.07575f, -0.06587f};
+    static private float BLUE_VB_BUTTON[] =  {-0.04528f, -0.05352f, -0.01235f, -0.06587f};
+    static private float YELLOW_VB_BUTTON[] =  {0.01482f, -0.05352f, 0.04775f, -0.06587f};
+    static private float GREEN_VB_BUTTON[] =  {0.07657f, -0.05352f, 0.10950f, -0.06587f};
 
     private Renderer mRenderer;
 
@@ -88,6 +120,9 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     static float HB_ORIGIN[] = {0.0f, 3.0f};
     static float HB_LENGTH = 1.2f;
     static float HB_WIDTH = 0.2f;
+
+    // attributes for virtual buttons
+    private Teapot mTeapot = new Teapot();
 
     public TapARRenderer(TapAR activity,
                           SampleApplicationSession session)
@@ -176,6 +211,8 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                     GLES20.GL_UNSIGNED_BYTE, t.mData);
         }
 
+        // TODO: fix ugly code looool
+        // frame
         shaderProgramID = SampleUtils.createProgramFromShaderSrc(
                 CubeShaders.CUBE_MESH_VERTEX_SHADER,
                 CubeShaders.CUBE_MESH_FRAGMENT_SHADER);
@@ -191,6 +228,7 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
         calphaHandle = GLES20.glGetUniformLocation(shaderProgramID,
                 "calpha");
 
+        // health bar
         hbShaderProgramID = SampleUtils.createProgramFromShaderSrc(
                 LineShaders.LINE_VERTEX_SHADER, LineShaders.LINE_FRAGMENT_SHADER);
 
@@ -201,6 +239,33 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
         lineOpacityHandle = GLES20.glGetUniformLocation(hbShaderProgramID,
                 "opacity");
         lineColorHandle = GLES20.glGetUniformLocation(hbShaderProgramID,
+                "color");
+
+        // open gl setup for teapot 3d
+        tshaderProgramID = SampleUtils.createProgramFromShaderSrc(
+                CubeShaders.CUBE_MESH_VERTEX_SHADER,
+                CubeShaders.CUBE_MESH_FRAGMENT_SHADER);
+
+        tvertexHandle = GLES20.glGetAttribLocation(shaderProgramID,
+                "vertexPosition");
+        ttextureCoordHandle = GLES20.glGetAttribLocation(shaderProgramID,
+                "vertexTexCoord");
+        tmvpMatrixHandle = GLES20.glGetUniformLocation(shaderProgramID,
+                "modelViewProjectionMatrix");
+        ttexSampler2DHandle = GLES20.glGetUniformLocation(shaderProgramID,
+                "texSampler2D");
+
+        // OpenGL setup for Virtual Buttons
+        vbShaderProgramID = SampleUtils.createProgramFromShaderSrc(
+                LineShaders.LINE_VERTEX_SHADER, LineShaders.LINE_FRAGMENT_SHADER);
+
+        tmvpMatrixButtonsHandle = GLES20.glGetUniformLocation(vbShaderProgramID,
+                "modelViewProjectionMatrix");
+        vbVertexHandle = GLES20.glGetAttribLocation(vbShaderProgramID,
+                "vertexPosition");
+        tlineOpacityHandle = GLES20.glGetUniformLocation(vbShaderProgramID,
+                "opacity");
+        tlineColorHandle = GLES20.glGetUniformLocation(vbShaderProgramID,
                 "color");
 
         // Hide the Loading Dialog
@@ -329,12 +394,15 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                         (indexVuMarkToDisplay == tIdx));
                 gotVuMark = true;
 
+
+                // TODO: multiple vumark health bars
                 if (isMainVuMark) {
                     markerValue = instanceIdToValue(instanceId);
                     markerType = instanceIdToType(instanceId);
                     Image instanceImage = vmTgt.getInstanceImage();
                     markerBitmap = getBitMapFromImage(instanceImage);
 
+                    // START: steven's code for health bar for one
                     GLES20.glUseProgram(hbShaderProgramID);
 
                     float hbVertices[] = new float[12];
@@ -366,6 +434,7 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                     GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 4);
 
                     SampleUtils.checkGLError("Draw Health Bar");
+                    // END: steven's code
 
                     GLES20.glDisableVertexAttribArray(hbVertexHandle);
 

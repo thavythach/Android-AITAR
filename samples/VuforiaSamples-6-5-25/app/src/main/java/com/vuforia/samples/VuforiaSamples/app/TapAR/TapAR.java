@@ -27,12 +27,15 @@ import android.widget.TextView;
 import com.vuforia.CameraDevice;
 import com.vuforia.DataSet;
 import com.vuforia.HINT;
+import com.vuforia.ImageTarget;
 import com.vuforia.ObjectTracker;
+import com.vuforia.Rectangle;
 import com.vuforia.STORAGE_TYPE;
 import com.vuforia.State;
 import com.vuforia.Trackable;
 import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
+import com.vuforia.VirtualButton;
 import com.vuforia.Vuforia;
 import com.vuforia.samples.SampleApplication.SampleApplicationControl;
 import com.vuforia.samples.SampleApplication.SampleApplicationException;
@@ -88,10 +91,28 @@ public class TapAR extends Activity implements
     private TextView _textValue;
     private ImageView _instanceImageView;
 
+    // attributes for virtual buttons
+    private DataSet dataSet = null;
+
+    // attributes for virtual button runtime creation
+    private boolean updateBtns = false;
+    public String virtualButtonColors[] = { "red", "blue", "yellow", "green" };
+
+    // static attributes for virtual button Enumeration for masking button indices into single integer
+    private static final int BUTTON_1 = 1;
+    private static final int BUTTON_2 = 2;
+    private static final int BUTTON_3 = 3;
+    private static final int BUTTON_4 = 4;
+
+    // additional attributes for virtual buttons
+    private byte buttonMask = 0;
+    static final int NUM_BUTTONS = 4;
+
     // Alert Dialog used to display SDK errors
     private AlertDialog mErrorDialog;
 
     boolean mIsDroidDevice = false;
+
 
 
     // Called when the activity first starts or the user navigates back to an
@@ -189,6 +210,16 @@ public class TapAR extends Activity implements
     {
         mTextures.add(Texture.loadTextureFromApk("vumark_texture.png",
                 getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("TextureTeapotBrass.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("TextureTeapotRed.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("TextureTeapotBlue.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk(
+                "VirtualButtons/TextureTeapotYellow.png", getAssets()));
+        mTextures.add(Texture.loadTextureFromApk(
+                "VirtualButtons/TextureTeapotGreen.png", getAssets()));
     }
 
 
@@ -303,6 +334,7 @@ public class TapAR extends Activity implements
         loadingDialogHandler
                 .sendEmptyMessage(LoadingDialogHandler.SHOW_LOADING_DIALOG);
 
+
         // Adds the inflated layout to the view
         addContentView(mUILayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
@@ -371,8 +403,12 @@ public class TapAR extends Activity implements
         if (mCurrentDataset == null)
             return false;
 
+        // TODO: switch to get vumarks working?
+        String datasetVB = "VirtualButtons/Wood.xml";
+        String datasetALL = "Vuforia.xml";
+
         if (!mCurrentDataset.load(
-                "Vuforia.xml",
+                datasetVB,
                 STORAGE_TYPE.STORAGE_APPRESOURCE))
             return false;
 
@@ -447,7 +483,7 @@ public class TapAR extends Activity implements
 
             vuforiaAppSession.startAR(CameraDevice.CAMERA_DIRECTION.CAMERA_DIRECTION_DEFAULT);
 
-            mSampleAppMenu = new SampleAppMenu(this, this, "VuMark",
+            mSampleAppMenu = new SampleAppMenu(this, this, "TapAR",
                     mGlView, mUILayout, null);
             setSampleAppMenuSettings();
 
@@ -534,6 +570,125 @@ public class TapAR extends Activity implements
     @Override
     public void onVuforiaUpdate(State state)
     {
+        if (updateBtns)
+        {
+            // Update runs in the tracking thread therefore it is guaranteed
+            // that the tracker is
+            // not doing anything at this point. => Reconfiguration is possible.
+
+            ObjectTracker ot = (ObjectTracker) (TrackerManager.getInstance()
+                    .getTracker(ObjectTracker.getClassType()));
+            assert (dataSet != null);
+
+            // Deactivate the data set prior to reconfiguration:
+            ot.deactivateDataSet(dataSet);
+
+            assert (dataSet.getNumTrackables() > 0);
+            Trackable trackable = dataSet.getTrackable(0);
+
+            assert (trackable != null);
+            assert (trackable.getType() == ObjectTracker.getClassType());
+            ImageTarget imageTarget = (ImageTarget) (trackable);
+
+            if ((buttonMask & BUTTON_1) != 0)
+            {
+                Log.d(LOGTAG, "Toggle Button 1");
+
+                toggleVirtualButton(imageTarget, virtualButtonColors[0],
+                        -0.10868f, -0.05352f, -0.07575f, -0.06587f);
+
+            }
+            if ((buttonMask & BUTTON_2) != 0)
+            {
+                Log.d(LOGTAG, "Toggle Button 2");
+
+                toggleVirtualButton(imageTarget, virtualButtonColors[1],
+                        -0.04528f, -0.05352f, -0.01235f, -0.06587f);
+            }
+            if ((buttonMask & BUTTON_3) != 0)
+            {
+                Log.d(LOGTAG, "Toggle Button 3");
+
+                toggleVirtualButton(imageTarget, virtualButtonColors[2],
+                        0.01482f, -0.05352f, 0.04775f, -0.06587f);
+            }
+            if ((buttonMask & BUTTON_4) != 0)
+            {
+                Log.d(LOGTAG, "Toggle Button 4");
+
+                toggleVirtualButton(imageTarget, virtualButtonColors[3],
+                        0.07657f, -0.05352f, 0.10950f, -0.06587f);
+            }
+
+            // Reactivate the data set:
+            ot.activateDataSet(dataSet);
+
+            buttonMask = 0;
+            updateBtns = false;
+        }
+    }
+
+    // Create/destroy a Virtual Button at runtime
+    //
+    // Note: This will NOT work if the tracker is active!
+    boolean toggleVirtualButton(ImageTarget imageTarget, String name,
+                                float left, float top, float right, float bottom)
+    {
+        Log.d(LOGTAG, "toggleVirtualButton");
+
+        boolean buttonToggleSuccess = false;
+
+        VirtualButton virtualButton = imageTarget.getVirtualButton(name);
+        if (virtualButton != null)
+        {
+            Log.d(LOGTAG, "Destroying Virtual Button> " + name);
+            buttonToggleSuccess = imageTarget
+                    .destroyVirtualButton(virtualButton);
+        } else
+        {
+            Log.d(LOGTAG, "Creating Virtual Button> " + name);
+            Rectangle vbRectangle = new Rectangle(left, top, right, bottom);
+            VirtualButton virtualButton2 = imageTarget.createVirtualButton(
+                    name, vbRectangle);
+
+            if (virtualButton2 != null)
+            {
+                // This is just a showcase. The values used here a set by
+                // default on Virtual Button creation
+                virtualButton2.setEnabled(true);
+                virtualButton2.setSensitivity(VirtualButton.SENSITIVITY.MEDIUM);
+                buttonToggleSuccess = true;
+            }
+        }
+
+        return buttonToggleSuccess;
+    }
+
+    private void addButtonToToggle(int virtualButtonIdx)
+    {
+        Log.d(LOGTAG, "addButtonToToggle");
+
+        assert (virtualButtonIdx >= 0 && virtualButtonIdx < NUM_BUTTONS);
+
+        switch (virtualButtonIdx)
+        {
+            case 0:
+                buttonMask |= BUTTON_1;
+                break;
+
+            case 1:
+                buttonMask |= BUTTON_2;
+                break;
+
+            case 2:
+                buttonMask |= BUTTON_3;
+                break;
+
+            case 3:
+                buttonMask |= BUTTON_4;
+                break;
+        }
+        updateBtns = true;
     }
 
 
@@ -624,6 +779,10 @@ public class TapAR extends Activity implements
 
     final public static int CMD_BACK = -1;
     final public static int CMD_EXTENDED_TRACKING = 1;
+    final public static int CMD_BUTTON_RED = 2;
+    final public static int CMD_BUTTON_BLUE = 3;
+    final public static int CMD_BUTTON_YELLOW = 4;
+    final public static int CMD_BUTTON_GREEN = 5;
 
     // This method sets the menu's settings
     private void setSampleAppMenuSettings()
@@ -688,6 +847,21 @@ public class TapAR extends Activity implements
                 if (result)
                     mExtendedTracking = !mExtendedTracking;
 
+                break;
+            case CMD_BUTTON_RED:
+                addButtonToToggle(0);
+                break;
+
+            case CMD_BUTTON_BLUE:
+                addButtonToToggle(1);
+                break;
+
+            case CMD_BUTTON_YELLOW:
+                addButtonToToggle(2);
+                break;
+
+            case CMD_BUTTON_GREEN:
+                addButtonToToggle(3);
                 break;
 
             default:

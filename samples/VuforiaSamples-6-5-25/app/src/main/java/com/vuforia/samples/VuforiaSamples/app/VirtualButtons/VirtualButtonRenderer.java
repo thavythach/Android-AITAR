@@ -67,7 +67,7 @@ public class VirtualButtonRenderer implements GLSurfaceView.Renderer, SampleAppR
     private int lineOpacityHandle = 0;
     private int lineColorHandle = 0;
     private int mvpMatrixButtonsHandle = 0;
-    
+
     // OpenGL ES 2.0 specific (Virtual Buttons):
     private int vbShaderProgramID = 0;
     private int vbVertexHandle = 0;
@@ -210,8 +210,7 @@ public class VirtualButtonRenderer implements GLSurfaceView.Renderer, SampleAppR
         GLES20.glCullFace(GLES20.GL_BACK);
 
         // Did we find any trackables this frame?
-        if (state.getNumTrackableResults() > 0)
-        {
+        if (state.getNumTrackableResults() > 0) {
             // Get the trackable:
             TrackableResult trackableResult = state.getTrackableResult(0);
             float[] modelViewMatrix = Tool.convertPose2GLMatrix(
