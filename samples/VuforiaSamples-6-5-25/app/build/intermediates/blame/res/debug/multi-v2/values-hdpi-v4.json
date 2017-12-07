@@ -19,6 +19,25 @@
                         "endColumns": "48,49",
                         "endOffsets": "99,149"
                     }
+                },
+                {
+                    "source": "C:\\Users\\Steven Ye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cc151b2a3c8b3612fcee8422fa459468\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "154",
+                        "endLines": "8",
+                        "endColumns": "13",
+                        "endOffsets": "426"
+                    }
                 }
             ]
         },

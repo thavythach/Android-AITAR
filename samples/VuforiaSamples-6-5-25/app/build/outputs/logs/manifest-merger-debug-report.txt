@@ -1,28 +1,42 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-MERGED from [com.google.android.gms:play-services-games:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-11.6.2.aar\5f00a16a5ed8f24f966905ef98a9bd7b\AndroidManifest.xml:16:1-19:12
-MERGED from [com.google.android.gms:play-services-drive:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.6.2.aar\bc4845ead0ef3733a010f24311e570f7\AndroidManifest.xml:16:1-19:12
-MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:16:1-21:12
-MERGED from [com.google.android.gms:play-services-tasks:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.6.2.aar\85a7977187a6ac2aa8230b1459988912\AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:16:1-23:12
-MERGED from [com.google.android.gms:play-services-games-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.6.2.aar\b7b7444401f5fdde0ff954ddd339af92\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\ca37eb9c08671ea0dfd6d18c7b2f5cce\AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\d3d3f5f805f847d926267b8e8d04eb80\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-drive-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.6.2.aar\211c6705a35ffd31585e6026189d4c24\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.6.2.aar\14220192a24d1e1f058401b73b856964\AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\bbe1a0b0d48c6a60a21c352930ac7250\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\e13482b723202b1fb9f06215e43df436\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\1e986c2a830f58594c3915bcc89364f0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\5aeb80ce6673b7609c7fb1609fcb9600\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\5c7c68aa39a59b522c530c938a649e0c\AndroidManifest.xml:17:1-27:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-197:12
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-auth:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.0.1.aar\021e941420514cad2793e00a11d37081\AndroidManifest.xml:16:1-21:12
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\butterknife-8.5.1.aar\d71f976262ea2e7d2636b918b390dce1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-database:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-10.0.1.aar\fce8a242662cf61b4c4cad54be808714\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-storage:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-10.0.1.aar\8a6e4440bc70dfe965d8406153a1ebbf\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-core-10.0.1.aar\6564ca02fcda7babab4b9d816fc1b575\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-database-connection:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-10.0.1.aar\e65e42d18ab5cb9e84c433ee61743c75\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:16:1-51:12
+MERGED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.0.1.aar\41270ba7b3985c78ea133f28e0b60d10\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.firebase:firebase-storage-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-10.0.1.aar\166b6d7675451a4ed67403970bb80973\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
 	package
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
@@ -38,272 +52,516 @@ INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samp
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:5-74
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:5-74
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:5-74
-MERGED from [com.google.android.gms:play-services-games:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-11.6.2.aar\5f00a16a5ed8f24f966905ef98a9bd7b\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-games:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-11.6.2.aar\5f00a16a5ed8f24f966905ef98a9bd7b\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-drive:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.6.2.aar\bc4845ead0ef3733a010f24311e570f7\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-drive:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.6.2.aar\bc4845ead0ef3733a010f24311e570f7\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.6.2.aar\85a7977187a6ac2aa8230b1459988912\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.6.2.aar\85a7977187a6ac2aa8230b1459988912\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-games-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.6.2.aar\b7b7444401f5fdde0ff954ddd339af92\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-games-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.6.2.aar\b7b7444401f5fdde0ff954ddd339af92\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\ca37eb9c08671ea0dfd6d18c7b2f5cce\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\ca37eb9c08671ea0dfd6d18c7b2f5cce\AndroidManifest.xml:4:5-43
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:21:5-23:54
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\d3d3f5f805f847d926267b8e8d04eb80\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\d3d3f5f805f847d926267b8e8d04eb80\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-drive-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.6.2.aar\211c6705a35ffd31585e6026189d4c24\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-drive-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.6.2.aar\211c6705a35ffd31585e6026189d4c24\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.6.2.aar\14220192a24d1e1f058401b73b856964\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.6.2.aar\14220192a24d1e1f058401b73b856964\AndroidManifest.xml:4:5-43
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\bbe1a0b0d48c6a60a21c352930ac7250\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\bbe1a0b0d48c6a60a21c352930ac7250\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\e13482b723202b1fb9f06215e43df436\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\e13482b723202b1fb9f06215e43df436\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\1e986c2a830f58594c3915bcc89364f0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\1e986c2a830f58594c3915bcc89364f0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\5aeb80ce6673b7609c7fb1609fcb9600\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\5aeb80ce6673b7609c7fb1609fcb9600\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\5c7c68aa39a59b522c530c938a649e0c\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\5c7c68aa39a59b522c530c938a649e0c\AndroidManifest.xml:21:5-23:58
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:5-74
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:5-74
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:13:5-15:41
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:13:5-15:41
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:13:5-15:41
+MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.0.1.aar\021e941420514cad2793e00a11d37081\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.0.1.aar\021e941420514cad2793e00a11d37081\AndroidManifest.xml:17:5-42
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\butterknife-8.5.1.aar\d71f976262ea2e7d2636b918b390dce1\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\butterknife-8.5.1.aar\d71f976262ea2e7d2636b918b390dce1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-10.0.1.aar\fce8a242662cf61b4c4cad54be808714\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-10.0.1.aar\fce8a242662cf61b4c4cad54be808714\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-10.0.1.aar\8a6e4440bc70dfe965d8406153a1ebbf\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-10.0.1.aar\8a6e4440bc70dfe965d8406153a1ebbf\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:20:5-42
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:20:5-42
+MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-core-10.0.1.aar\6564ca02fcda7babab4b9d816fc1b575\AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-core-10.0.1.aar\6564ca02fcda7babab4b9d816fc1b575\AndroidManifest.xml:4:5-42
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-database-connection:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-10.0.1.aar\e65e42d18ab5cb9e84c433ee61743c75\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database-connection:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-10.0.1.aar\e65e42d18ab5cb9e84c433ee61743c75\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.0.1.aar\41270ba7b3985c78ea133f28e0b60d10\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.0.1.aar\41270ba7b3985c78ea133f28e0b60d10\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-10.0.1.aar\166b6d7675451a4ed67403970bb80973\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-10.0.1.aar\166b6d7675451a4ed67403970bb80973\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:13:5-15:41
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:13:5-15:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:42-71
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:15:9-38
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:15-41
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:14:9-35
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
 uses-feature#0x00020000
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:16:5-54
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:17:5-54
 	android:glEsVersion
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:16:19-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:17:19-51
 uses-feature#android.hardware.camera
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:32:5-60
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:33:5-60
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:32:19-57
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:33:19-57
 uses-permission#android.permission.CAMERA
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:37:5-65
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:36:5-65
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:37:22-62
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:36:22-62
 uses-permission#android.permission.INTERNET
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:42:5-66
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:39:5-67
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:42:22-64
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:39:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:48:5-79
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:45:5-79
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:48:22-76
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:45:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:50:5-79
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:46:5-80
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:50:22-77
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:46:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:47:5-81
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:47:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:48:5-75
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:48:22-72
 application
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:62:5-195:19
-MERGED from [com.google.android.gms:play-services-games:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-11.6.2.aar\5f00a16a5ed8f24f966905ef98a9bd7b\AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-games:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-11.6.2.aar\5f00a16a5ed8f24f966905ef98a9bd7b\AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-drive:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.6.2.aar\bc4845ead0ef3733a010f24311e570f7\AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-drive:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.6.2.aar\bc4845ead0ef3733a010f24311e570f7\AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.6.2.aar\85a7977187a6ac2aa8230b1459988912\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.6.2.aar\85a7977187a6ac2aa8230b1459988912\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-games-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.6.2.aar\b7b7444401f5fdde0ff954ddd339af92\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-games-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.6.2.aar\b7b7444401f5fdde0ff954ddd339af92\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\ca37eb9c08671ea0dfd6d18c7b2f5cce\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\ca37eb9c08671ea0dfd6d18c7b2f5cce\AndroidManifest.xml:5:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\07c4cf7bd671065da16c972b3ef99343\AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\d3d3f5f805f847d926267b8e8d04eb80\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\d3d3f5f805f847d926267b8e8d04eb80\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-drive-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.6.2.aar\211c6705a35ffd31585e6026189d4c24\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-drive-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.6.2.aar\211c6705a35ffd31585e6026189d4c24\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.6.2.aar\14220192a24d1e1f058401b73b856964\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.6.2.aar\14220192a24d1e1f058401b73b856964\AndroidManifest.xml:5:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\bbe1a0b0d48c6a60a21c352930ac7250\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\bbe1a0b0d48c6a60a21c352930ac7250\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\e13482b723202b1fb9f06215e43df436\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\e13482b723202b1fb9f06215e43df436\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\1e986c2a830f58594c3915bcc89364f0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\1e986c2a830f58594c3915bcc89364f0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\5aeb80ce6673b7609c7fb1609fcb9600\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\5aeb80ce6673b7609c7fb1609fcb9600\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\5c7c68aa39a59b522c530c938a649e0c\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\5c7c68aa39a59b522c530c938a649e0c\AndroidManifest.xml:25:5-20
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:60:5-161:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.0.1.aar\021e941420514cad2793e00a11d37081\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.0.1.aar\021e941420514cad2793e00a11d37081\AndroidManifest.xml:19:5-20:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-crash-10.0.1.aar\63158ca0d460a1ebd3f41ac4c6be8180\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-core-10.0.1.aar\6564ca02fcda7babab4b9d816fc1b575\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-core-10.0.1.aar\6564ca02fcda7babab4b9d816fc1b575\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.0.1.aar\41270ba7b3985c78ea133f28e0b60d10\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.0.1.aar\41270ba7b3985c78ea133f28e0b60d10\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:24:5-28:19
 	android:label
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:64:9-41
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:66:9-40
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:65:9-40
 	android:icon
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:63:9-38
 	android:allowBackup
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:67:9-35
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:61:9-35
 	android:description
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:65:9-54
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:62:9-54
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:68:9-47
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:66:9-47
 activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivitySplashScreen
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:87:10-98:21
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:83:9-93:20
 	android:screenOrientation
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:90:13-49
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:87:13-49
 	android:noHistory
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:91:13-37
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:86:13-37
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:89:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:85:13-93
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:88:13-65
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:84:13-65
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:93:13-97:29
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:88:13-92:29
 action#android.intent.action.MAIN
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:94:17-69
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:89:17-69
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:94:25-66
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:89:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:96:17-77
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:91:17-77
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:96:27-74
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:91:27-74
 activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityLauncher
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:100:9-105:20
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:94:9-97:52
 	android:screenOrientation
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:103:13-49
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:97:13-49
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:102:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:96:13-93
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:101:13-61
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:95:13-61
 activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.AboutScreen
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:107:10-113:20
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:98:9-102:52
 	android:screenOrientation
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:110:13-49
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:102:13-49
 	android:noHistory
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:111:13-37
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:101:13-37
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:109:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:100:13-93
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:108:13-56
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:99:13-56
 activity#com.vuforia.samples.VuforiaSamples.app.ImageTargets.ImageTargets
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:115:9-121:20
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:103:9-107:54
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:119:13-44
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:106:13-44
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:117:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:105:13-93
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:118:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:107:13-51
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:116:13-58
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:104:13-58
 activity#com.vuforia.samples.VuforiaSamples.app.VuMark.VuMark
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:123:9-129:20
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:108:9-112:54
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:127:13-44
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:111:13-44
+	android:configChanges
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:110:13-93
+	android:theme
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:112:13-51
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:109:13-46
+activity#com.vuforia.samples.VuforiaSamples.app.TextRecognition.TextReco
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:113:9-117:54
+	android:launchMode
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:116:13-44
+	android:configChanges
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:115:13-93
+	android:theme
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:117:13-51
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:114:13-57
+activity#com.vuforia.samples.VuforiaSamples.app.CylinderTargets.CylinderTargets
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:118:9-122:54
+	android:launchMode
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:121:13-44
+	android:configChanges
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:120:13-93
+	android:theme
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:122:13-51
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:119:13-64
+activity#com.vuforia.samples.VuforiaSamples.app.VirtualButtons.VirtualButtons
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:123:9-127:54
+	android:launchMode
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:126:13-44
 	android:configChanges
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:125:13-93
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:126:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:127:13-51
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:124:13-46
-activity#com.vuforia.samples.VuforiaSamples.app.TextRecognition.TextReco
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:131:9-137:20
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:124:13-62
+activity#com.vuforia.samples.VuforiaSamples.app.UserDefinedTargets.UserDefinedTargets
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:128:9-132:54
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:135:13-44
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:131:13-44
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:133:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:130:13-93
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:134:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:132:13-51
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:132:13-57
-activity#com.vuforia.samples.VuforiaSamples.app.CylinderTargets.CylinderTargets
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:139:9-145:20
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:129:13-70
+activity#com.vuforia.samples.VuforiaSamples.app.MultiTargets.MultiTargets
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:133:9-137:54
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:143:13-44
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:136:13-44
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:141:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:135:13-93
+	android:theme
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:137:13-51
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:134:13-58
+activity#com.vuforia.samples.VuforiaSamples.app.CloudRecognition.CloudReco
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:138:9-142:54
+	android:launchMode
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:141:13-44
+	android:configChanges
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:140:13-93
 	android:theme
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:142:13-51
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:140:13-64
-activity#com.vuforia.samples.VuforiaSamples.app.VirtualButtons.VirtualButtons
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:147:9-153:20
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:139:13-59
+activity#com.vuforia.samples.VuforiaSamples.app.ObjectRecognition.ObjectTargets
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:143:9-147:54
+	android:launchMode
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:146:13-44
+	android:configChanges
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:145:13-93
+	android:theme
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:147:13-51
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:144:13-64
+activity#com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:148:9-152:54
 	android:launchMode
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:151:13-44
 	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:149:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:150:13-93
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:150:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:152:13-51
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:148:13-62
-activity#com.vuforia.samples.VuforiaSamples.app.UserDefinedTargets.UserDefinedTargets
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:155:9-161:20
-	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:159:13-44
-	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:157:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:149:13-44
+activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityLogin
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:153:9-156:60
+	android:label
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:155:13-57
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:158:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:156:13-57
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:156:13-70
-activity#com.vuforia.samples.VuforiaSamples.app.MultiTargets.MultiTargets
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:163:9-169:20
-	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:167:13-44
-	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:165:13-93
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:154:13-58
+activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:157:9-160:69
+	android:label
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:159:13-56
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:166:13-51
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:160:13-57
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:164:13-58
-activity#com.vuforia.samples.VuforiaSamples.app.CloudRecognition.CloudReco
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:171:9-177:20
-	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:175:13-44
-	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:173:13-93
-	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:174:13-51
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:172:13-59
-activity#com.vuforia.samples.VuforiaSamples.app.ObjectRecognition.ObjectTargets
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:179:9-185:20
-	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:183:13-44
-	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:181:13-93
-	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:182:13-51
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:180:13-64
-activity#com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:187:9-193:20
-	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:191:13-44
-	android:configChanges
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:189:13-93
-	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:190:13-51
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:188:13-44
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:19:9-172
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:19:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:19:86-145
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\3838815ceb0e8a2c4608113413d7f836\AndroidManifest.xml:19:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:20:9-121
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:158:13-57
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\fef172468446f9e4217af0225cf1caf8\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fd6b1e055a7b4730ee8b97492bc8741c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4adc542e7073cf8bd00c6156e5ea9e8b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\aaf58ae5c2b5bc64223053a4f3f616aa\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\072ddba76cd73cf0529e76f3f8b04ad9\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\e3017b442f58bfcf7984bc76700e42da\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\086d12d1e83817fb847f8bf38f8c078c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cfc76ff337f69ed3eb56931239910663\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0d96e0c9800d58e74964f3254cd65d79\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:20:66-119
+		ADDED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.6.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.6.2.aar\658017a615d1b17914043eb9fd4141f9\AndroidManifest.xml:20:20-65
+		ADDED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-base-10.0.1.aar\d0e4c60920ae4002e212af6129152ddf\AndroidManifest.xml:19:19-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:22:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.0.1.aar\d524949cc9861991a766c58b7a1ed154\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.0.1.aar\e1b4dcc6bba59ddb81a96bd617ecfda4\AndroidManifest.xml:32:16-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:22:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:17-71
+permission#com.vuforia.samples.VuforiaSamples.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:26:22-76
+uses-permission#com.vuforia.samples.VuforiaSamples.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:31:13-35:29
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.vuforia.samples.VuforiaSamples
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:34:27-58
+category#com.vuforia.samples.VuforiaSamples
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:44:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.0.1.aar\a8559a115da503083e46161e13db5a97\AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\firebase-common-10.0.1.aar\708c94832e0f723b412a1de660d58d16\AndroidManifest.xml:6:79-143
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.0.1.aar\f0673c47c8c6c7d433e0b8b68169a338\AndroidManifest.xml:20:20-65
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:26:13-58

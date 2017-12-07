@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -29,6 +30,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -51,15 +53,12 @@ import com.vuforia.samples.SampleApplication.utils.LoadingDialogHandler;
 import com.vuforia.samples.SampleApplication.utils.SampleApplicationGLView;
 import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.R;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenu;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuGroup;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterface;
+import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser;
 
 import java.util.Vector;
 
 
-public class VuMark extends Activity implements SampleApplicationControl,
-        SampleAppMenuInterface
+public class VuMark extends Activity implements SampleApplicationControl
 {
     private static final String LOGTAG = "VuMark";
     
@@ -77,19 +76,14 @@ public class VuMark extends Activity implements SampleApplicationControl,
     
     // The textures we will use for rendering:
     private Vector<Texture> mTextures;
-    
-    private boolean mContAutofocus = false;
-    private boolean mExtendedTracking = false;
 
     private RelativeLayout mUILayout;
-    
-    private SampleAppMenu mSampleAppMenu;
     
     LoadingDialogHandler loadingDialogHandler = new LoadingDialogHandler(this);
 
     private View _viewCard;
-    private TextView _textType;
     private TextView _textValue;
+    private Button _btnConfirm;
     private ImageView _instanceImageView;
 
     // Alert Dialog used to display SDK errors
@@ -128,20 +122,20 @@ public class VuMark extends Activity implements SampleApplicationControl,
         _viewCard.setVisibility(View.INVISIBLE);
         LinearLayout cardLayout = (LinearLayout) _viewCard.findViewById(R.id.card_layout);
 
-        cardLayout.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    hideCard();
-                    return true;
-                }
-                return false;
-            }
-        });
         addContentView(_viewCard, layoutParamsControl);
 
-        _textType = (TextView) _viewCard.findViewById(R.id.text_type);
-        _textValue = (TextView) _viewCard.findViewById(R.id.text_value);
         _instanceImageView = (ImageView) _viewCard.findViewById(R.id.instance_image);
+        _textValue = (TextView) _viewCard.findViewById(R.id.text_value);
+        _btnConfirm = (Button) _viewCard.findViewById(R.id.btnConfirm);
+        _btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.putExtra(ActivityUser.KEY_VUMARK, _textValue.getText().toString());
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
     }
     
     // Process Single Tap event to trigger autofocus
@@ -325,7 +319,6 @@ public class VuMark extends Activity implements SampleApplicationControl,
                 Animation bottomUp = AnimationUtils.loadAnimation(context,
                         R.anim.bottom_up);
 
-                _textType.setText(type);
                 _textValue.setText(value);
                 if (bitmap != null) {
                     _instanceImageView.setImageBitmap(bitmap);
@@ -347,7 +340,6 @@ public class VuMark extends Activity implements SampleApplicationControl,
             if (_viewCard.getVisibility() != View.VISIBLE) {
                 return;
             }
-            _textType.setText("");
             _textValue.setText("");
             Animation bottomDown = AnimationUtils.loadAnimation(context,
                     R.anim.bottom_down);
@@ -450,10 +442,6 @@ public class VuMark extends Activity implements SampleApplicationControl,
             mUILayout.setBackgroundColor(Color.TRANSPARENT);
             
             vuforiaAppSession.startAR(CameraDevice.CAMERA_DIRECTION.CAMERA_DIRECTION_DEFAULT);
-            
-            mSampleAppMenu = new SampleAppMenu(this, this, "VuMark",
-                mGlView, mUILayout, null);
-            setSampleAppMenuSettings();
             
         } else
         {
@@ -613,91 +601,6 @@ public class VuMark extends Activity implements SampleApplicationControl,
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        // Process the Gestures
-        if (mSampleAppMenu != null && mSampleAppMenu.processEvent(event))
-            return true;
-        
         return mGestureDetector.onTouchEvent(event);
-    }
-    
-    
-    boolean isExtendedTrackingActive()
-    {
-        return mExtendedTracking;
-    }
-    
-    final public static int CMD_BACK = -1;
-    final public static int CMD_EXTENDED_TRACKING = 1;
-
-    // This method sets the menu's settings
-    private void setSampleAppMenuSettings()
-    {
-        SampleAppMenuGroup group;
-        
-        group = mSampleAppMenu.addGroup("", false);
-        group.addTextItem(getString(R.string.menu_back), -1);
-        
-        group = mSampleAppMenu.addGroup("", true);
-        group.addSelectionItem(getString(R.string.menu_extended_tracking),
-            CMD_EXTENDED_TRACKING, false);
-
-        mSampleAppMenu.attachMenu();
-    }
-    
-    
-    @Override
-    public boolean menuProcess(int command)
-    {
-        
-        boolean result = true;
-        
-        switch (command)
-        {
-            case CMD_BACK:
-                finish();
-                break;
-
-            case CMD_EXTENDED_TRACKING:
-                for (int tIdx = 0; tIdx < mCurrentDataset.getNumTrackables(); tIdx++)
-                {
-                    Trackable trackable = mCurrentDataset.getTrackable(tIdx);
-                    
-                    if (!mExtendedTracking)
-                    {
-                        if (!trackable.startExtendedTracking())
-                        {
-                            Log.e(LOGTAG,
-                                "Failed to start extended tracking target");
-                            result = false;
-                        } else
-                        {
-                            Log.d(LOGTAG,
-                                "Successfully started extended tracking target");
-                        }
-                    } else
-                    {
-                        if (!trackable.stopExtendedTracking())
-                        {
-                            Log.e(LOGTAG,
-                                "Failed to stop extended tracking target");
-                            result = false;
-                        } else
-                        {
-                            Log.d(LOGTAG,
-                                "Successfully started extended tracking target");
-                        }
-                    }
-                }
-                
-                if (result)
-                    mExtendedTracking = !mExtendedTracking;
-                
-                break;
-            
-            default:
-                break;
-        }
-        
-        return result;
     }
 }

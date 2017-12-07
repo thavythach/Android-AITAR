@@ -88,6 +88,7 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     static float HB_ORIGIN[] = {0.0f, 3.0f};
     static float HB_LENGTH = 1.2f;
     static float HB_WIDTH = 0.2f;
+    static float HB_OPACITY = 0.6f;
 
     public TapARRenderer(TapAR activity,
                           SampleApplicationSession session)
@@ -329,52 +330,6 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                         (indexVuMarkToDisplay == tIdx));
                 gotVuMark = true;
 
-                if (isMainVuMark) {
-                    markerValue = instanceIdToValue(instanceId);
-                    markerType = instanceIdToType(instanceId);
-                    Image instanceImage = vmTgt.getInstanceImage();
-                    markerBitmap = getBitMapFromImage(instanceImage);
-
-                    GLES20.glUseProgram(hbShaderProgramID);
-
-                    float hbVertices[] = new float[12];
-                    hbVertices[0] = HB_ORIGIN[0] - HB_LENGTH/2;
-                    hbVertices[1] = HB_ORIGIN[1] - HB_WIDTH/2;
-                    hbVertices[2] = 0.0f;
-                    hbVertices[3] = HB_ORIGIN[0] + HB_LENGTH/2;
-                    hbVertices[4] = HB_ORIGIN[1] - HB_WIDTH/2;
-                    hbVertices[5] = 0.0f;
-                    hbVertices[6] = HB_ORIGIN[0] + HB_LENGTH/2;
-                    hbVertices[7] = HB_ORIGIN[1] + HB_WIDTH/2;
-                    hbVertices[8] = 0.0f;
-                    hbVertices[9] = HB_ORIGIN[0] - HB_LENGTH/2;
-                    hbVertices[10] = HB_ORIGIN[1] + HB_WIDTH/2;
-                    hbVertices[11] = 0.0f;
-
-                    GLES20.glVertexAttribPointer(hbVertexHandle, 3,
-                            GLES20.GL_FLOAT, false, 0, fillBuffer(hbVertices));
-
-                    GLES20.glEnableVertexAttribArray(hbVertexHandle);
-
-                    // set opacity and color of health bar
-                    GLES20.glUniform1f(lineOpacityHandle, 0.7f);
-                    GLES20.glUniform3f(lineColorHandle, 0.0f, 1.0f, 0.0f);
-
-                    GLES20.glUniformMatrix4fv(hbMvpMatrixHandle, 1, false,
-                            modelViewProjection, 0);
-
-                    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 4);
-
-                    SampleUtils.checkGLError("Draw Health Bar");
-
-                    GLES20.glDisableVertexAttribArray(hbVertexHandle);
-
-                    if (! markerValue.equalsIgnoreCase(currentVumarkIdOnCard))
-                    {
-                        mActivity.hideCard();
-                        blinkVumark(true);
-                    }
-                }
                 int textureIndex = 0;
 
                 // activate the shader program and bind the vertex/normal/tex coords
@@ -408,6 +363,53 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                 GLES20.glDisableVertexAttribArray(vertexHandle);
                 GLES20.glDisableVertexAttribArray(textureCoordHandle);
                 SampleUtils.checkGLError("Render Frame");
+
+                if (isMainVuMark) {
+                    markerValue = instanceIdToValue(instanceId);
+                    markerType = instanceIdToType(instanceId);
+                    Image instanceImage = vmTgt.getInstanceImage();
+                    markerBitmap = getBitMapFromImage(instanceImage);
+
+                    GLES20.glUseProgram(hbShaderProgramID);
+
+                    float hbVertices[] = new float[12];
+                    hbVertices[0] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    hbVertices[1] = HB_ORIGIN[1] - HB_WIDTH/2;
+                    hbVertices[2] = 0.0f;
+                    hbVertices[3] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[4] = HB_ORIGIN[1] - HB_WIDTH/2;
+                    hbVertices[5] = 0.0f;
+                    hbVertices[6] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[7] = HB_ORIGIN[1] + HB_WIDTH/2;
+                    hbVertices[8] = 0.0f;
+                    hbVertices[9] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    hbVertices[10] = HB_ORIGIN[1] + HB_WIDTH/2;
+                    hbVertices[11] = 0.0f;
+
+                    GLES20.glVertexAttribPointer(hbVertexHandle, 3,
+                            GLES20.GL_FLOAT, false, 0, fillBuffer(hbVertices));
+
+                    GLES20.glEnableVertexAttribArray(hbVertexHandle);
+
+                    // set opacity and color of health bar
+                    GLES20.glUniform1f(lineOpacityHandle, HB_OPACITY);
+                    GLES20.glUniform3f(lineColorHandle, 0.0f, 1.0f, 0.0f);
+
+                    GLES20.glUniformMatrix4fv(hbMvpMatrixHandle, 1, false,
+                            modelViewProjection, 0);
+
+                    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 4);
+
+                    SampleUtils.checkGLError("Draw Health Bar");
+
+                    GLES20.glDisableVertexAttribArray(hbVertexHandle);
+
+                    if (! markerValue.equalsIgnoreCase(currentVumarkIdOnCard))
+                    {
+                        mActivity.hideCard();
+                        blinkVumark(true);
+                    }
+                }
             }
 
         }

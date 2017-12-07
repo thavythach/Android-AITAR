@@ -84,7 +84,6 @@ public class TapAR extends Activity implements
     LoadingDialogHandler loadingDialogHandler = new LoadingDialogHandler(this);
 
     private View _viewCard;
-    private TextView _textType;
     private TextView _textValue;
     private ImageView _instanceImageView;
 
@@ -135,7 +134,6 @@ public class TapAR extends Activity implements
         });
         addContentView(_viewCard, layoutParamsControl);
 
-        _textType = (TextView) _viewCard.findViewById(R.id.text_type);
         _textValue = (TextView) _viewCard.findViewById(R.id.text_value);
         _instanceImageView = (ImageView) _viewCard.findViewById(R.id.instance_image);
     }
@@ -321,7 +319,6 @@ public class TapAR extends Activity implements
                 Animation bottomUp = AnimationUtils.loadAnimation(context,
                         R.anim.bottom_up);
 
-                _textType.setText(type);
                 _textValue.setText(value);
                 if (bitmap != null) {
                     _instanceImageView.setImageBitmap(bitmap);
@@ -343,7 +340,6 @@ public class TapAR extends Activity implements
                 if (_viewCard.getVisibility() != View.VISIBLE) {
                     return;
                 }
-                _textType.setText("");
                 _textValue.setText("");
                 Animation bottomDown = AnimationUtils.loadAnimation(context,
                         R.anim.bottom_down);

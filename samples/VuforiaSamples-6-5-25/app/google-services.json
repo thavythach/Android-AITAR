@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "477424610590",
+    "firebase_url": "https://aitar-2151a.firebaseio.com",
+    "project_id": "aitar-2151a",
+    "storage_bucket": "aitar-2151a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477424610590:android:c02930d659a0d0d0",
+        "android_client_info": {
+          "package_name": "com.vuforia.samples.VuforiaSamples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477424610590-2cfhc8233iv87ht3ceh8hkcfdb6qr0l5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vuforia.samples.VuforiaSamples",
+            "certificate_hash": "10a1605e192bbeed7eed15142bb1da07171aea0c"
+          }
+        },
+        {
+          "client_id": "477424610590-qtrq3u1p5repi4jgtfm2v2i77l2qdo72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8_zit7oieD4Z5c2xFYZTNcr0L04j63Pc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477424610590-qtrq3u1p5repi4jgtfm2v2i77l2qdo72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

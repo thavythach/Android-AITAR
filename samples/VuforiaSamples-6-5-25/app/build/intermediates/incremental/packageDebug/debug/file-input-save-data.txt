@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Dec 03 17:07:07 CET 2017
+#Wed Dec 06 19:33:39 CET 2017
 5.base=C\:\\Android\\AndroidStudioProjects\\FinalProject\\android-peterAR\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\assets\\debug
 42.base=C\:\\Android\\AndroidStudioProjects\\FinalProject\\android-peterAR\\samples\\VuforiaSamples-6-5-25\\app\\build\\intermediates\\assets\\debug
 22.path=Tarmac.dat

@@ -53,7 +53,7 @@ public class ActivitySplashScreen extends Activity
             {
                 
                 Intent intent = new Intent(ActivitySplashScreen.this,
-                    ActivityLauncher.class);
+                    ActivityLogin.class);
                 startActivity(intent);
                 
             }
