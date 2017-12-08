@@ -7,25 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/btnMark"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose Marker"/>
-        <TextView
-            android:id="@+id/tvMark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start Game"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

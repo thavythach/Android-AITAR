@@ -16,7 +16,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.FirebaseDatabase;
 import com.vuforia.samples.VuforiaSamples.R;
+import com.vuforia.samples.VuforiaSamples.data.User;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,21 +56,26 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if (task.isSuccessful()) {
-                            FirebaseUser fbUser = task.getResult().getUser();
-                            fbUser.updateProfile(
-                                    new UserProfileChangeRequest.Builder().
-                                            setDisplayName(usernameFromEmail(fbUser.getEmail())).
-                                            build());
+                            addUserToDatabase(task.getResult().getUser());
 
-                            Toast.makeText(ActivityLogin.this, "Registration ok",
+                            Toast.makeText(ActivityLogin.this,
+                                    "Registration successful",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(ActivityLogin.this, "Error" +
-                                            task.getException().getMessage(),
+                            Toast.makeText(ActivityLogin.this,
+                                    "Error: " + task.getException().getMessage(),
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+    }
+
+    private void addUserToDatabase(final FirebaseUser fbUser) {
+        String key = FirebaseDatabase.getInstance().getReference().
+                child("users").push().getKey();
+        User newUser = new User(fbUser.getUid(), getNameFromEmail(fbUser.getEmail()));
+        FirebaseDatabase.getInstance().getReference().
+                child("users").child(key).setValue(newUser);
     }
 
     @OnClick(R.id.btnLogin)
@@ -100,7 +107,7 @@ public class ActivityLogin extends AppCompatActivity {
     private void showProgressDialog() {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(this);
-            progressDialog.setMessage("Wait for it...");
+            progressDialog.setMessage("Fetching data...");
         }
         progressDialog.show();
     }
@@ -117,7 +124,7 @@ public class ActivityLogin extends AppCompatActivity {
         return true;
     }
 
-    private String usernameFromEmail(String email) {
+    private String getNameFromEmail(String email) {
         if (email.contains("@")) {
             return email.split("@")[0];
         } else {

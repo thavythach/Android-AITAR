@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -13,6 +15,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 import com.vuforia.samples.VuforiaSamples.app.VuMark.VuMark;
+import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard;
+import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentRanking;
+import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentSettings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,12 +28,18 @@ public class ActivityUser extends AppCompatActivity {
     public static final int REQUEST_CODE_VUMARK = 1001;
     public static final String KEY_VUMARK = "KEY_VUMARK";
 
-    private String vuMarkStr;
-
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
-    @BindView(R.id.tvMark)
-    TextView tvMark;
+
+    private String vuMarkStr;
+
+    public String getVuMarkStr() {
+        return vuMarkStr;
+    }
+
+    public void setVuMarkStr(String vuMarkStr) {
+        this.vuMarkStr = vuMarkStr;
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,12 +48,13 @@ public class ActivityUser extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_settings:
+                    showFragment(FragmentSettings.TAG);
                     return true;
-                case R.id.navigation_scores:
+                case R.id.navigation_dashboard:
+                    showFragment(FragmentDashboard.TAG);
                     return true;
-                case R.id.navigation_logout:
-                    FirebaseAuth.getInstance().signOut();
-                    finish();
+                case R.id.navigation_ranking:
+                    showFragment(FragmentRanking.TAG);
                     return true;
             }
             return false;
@@ -56,34 +68,37 @@ public class ActivityUser extends AppCompatActivity {
         ButterKnife.bind(this);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setSelectedItemId(R.id.navigation_dashboard);
+    }
+
+    public void showFragment(String fragmentTag) {
+        Fragment newFragment = getSupportFragmentManager().findFragmentByTag(fragmentTag);
+        if (newFragment == null) {
+            switch (fragmentTag) {
+                case FragmentSettings.TAG:
+                    newFragment = new FragmentSettings();
+                    break;
+                case FragmentDashboard.TAG:
+                    newFragment = new FragmentDashboard();
+                    break;
+                case FragmentRanking.TAG:
+                    newFragment = new FragmentRanking();
+                    break;
+                default:
+                    newFragment = new FragmentDashboard();
+                    break;
+            }
+        }
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fragmentContainer, newFragment, fragmentTag);
+        ft.addToBackStack("stack");
+        ft.commit();
     }
 
     @Override
     public void onBackPressed() {
         FirebaseAuth.getInstance().signOut();
         super.onBackPressed();
-    }
-
-    @OnClick(R.id.btnMark)
-    void markClick() {
-        Intent intent = new Intent(this, VuMark.class);
-        startActivityForResult(intent, REQUEST_CODE_VUMARK);
-    }
-
-    @OnClick(R.id.btnStart)
-    void startClick() {
-        startActivity(new Intent(ActivityUser.this, TapAR.class));
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_VUMARK) {
-            if(resultCode == RESULT_OK) {
-                String vuMarkStr = data.getStringExtra(KEY_VUMARK);
-                this.vuMarkStr = vuMarkStr;
-                tvMark.setText(vuMarkStr);
-            }
-        }
     }
 
 }

@@ -7,13 +7,13 @@
         android:title="@string/title_settings" />
 
     <item
-        android:id="@+id/navigation_scores"
-        android:icon="@drawable/ic_stars_black_24dp"
-        android:title="@string/title_scores" />
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_dashboard" />
 
     <item
-        android:id="@+id/navigation_logout"
-        android:icon="@drawable/ic_exit_to_app_black_24dp"
-        android:title="@string/title_logout" />
+        android:id="@+id/navigation_ranking"
+        android:icon="@drawable/ic_stars_black_24dp"
+        android:title="@string/title_ranking" />
 
 </menu>
