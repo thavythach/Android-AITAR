@@ -6,47 +6,31 @@ package com.vuforia.samples.VuforiaSamples.data;
 
 public class Player {
 
-    private String uid;
-    private String vuMark;
-    private float health;
-    private int ammunition;
+    public static final int MAX_HEALTH = 100;
 
-    public Player(String uid, String vuMark) {
-        this.uid = uid;
-        this.vuMark = vuMark;
-        this.health = 1;
-        this.ammunition = 100;
+    private String name;
+    private int health;
+
+    public Player() {}
+
+    public Player(String name) {
+        this.name = name;
+        this.health = MAX_HEALTH;
     }
 
-    public String getUid() {
-        return uid;
+    public String getName() {
+        return name;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public float getHealth() {
+    public int getHealth() {
         return health;
     }
 
-    public void setHealth(float health) {
+    public void setHealth(int health) {
         this.health = health;
-    }
-
-    public int getAmmunition() {
-        return ammunition;
-    }
-
-    public void setAmmunition(int ammunition) {
-        this.ammunition = ammunition;
-    }
-
-    public String getVuMark() {
-        return vuMark;
-    }
-
-    public void setVuMark(String vuMark) {
-        this.vuMark = vuMark;
     }
 }

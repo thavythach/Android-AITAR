@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\598dd1d8215b7cc11aebb0fec9c20677\AndroidManifest.xml:2:1-11:12
@@ -34,9 +34,9 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Steven Ye
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\2db7dcd631e8646c3263351c151aa1f4\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b37028d7b29e78f7a8a893df121d4356\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9fa84deaa49ee7aa2a24a11879c444ad\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
-INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-163:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
+INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:2:1-165:12
 	package
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml
@@ -174,7 +174,7 @@ ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples
 	android:name
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:48:22-72
 application
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:60:5-161:19
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:60:5-163:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:25:5-29:19
@@ -376,7 +376,9 @@ ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples
 	android:name
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:149:13-44
 activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityLogin
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:153:9-156:60
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:153:9-157:51
+	android:screenOrientation
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:157:13-49
 	android:label
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:155:13-57
 	android:theme
@@ -384,13 +386,15 @@ ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples
 	android:name
 		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:154:13-58
 activity#com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser
-ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:157:9-160:69
+ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:158:9-162:51
+	android:screenOrientation
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:162:13-49
 	android:label
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:159:13-56
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:160:13-56
 	android:theme
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:160:13-57
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:161:13-57
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:158:13-57
+		ADDED from C:\Android\AndroidStudioProjects\FinalProject\android-peterAR\samples\VuforiaSamples-6-5-25\app\src\main\AndroidManifest.xml:159:13-57
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7d1363d867ea45093febf99b140421d7\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Steven Ye\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cc151b2a3c8b3612fcee8422fa459468\AndroidManifest.xml:26:9-28:38

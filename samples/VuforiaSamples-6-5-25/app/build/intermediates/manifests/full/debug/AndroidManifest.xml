@@ -162,10 +162,12 @@
         <activity
             android:name="com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityLogin"
             android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name="com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser"
             android:label="@string/title_activity_user"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light" />
 
         <meta-data

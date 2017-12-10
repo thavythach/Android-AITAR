@@ -19,11 +19,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.vuforia.CameraDevice;
 import com.vuforia.DataSet;
 import com.vuforia.HINT;
@@ -43,11 +49,20 @@ import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapARRenderer;
+import com.vuforia.samples.VuforiaSamples.data.Player;
+import com.vuforia.samples.VuforiaSamples.data.User;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenu;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuGroup;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterface;
 
+import java.util.EventListener;
 import java.util.Vector;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_NAME;
+import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_VUMARK;
 
 /**
  * Created by Thavy Thach on 12/1/2017.
@@ -58,6 +73,21 @@ public class TapAR extends Activity implements
 
     private static final String LOGTAG = "TapAR";
 
+    private DatabaseReference playersRef;
+    private ValueEventListener playerListener;
+    private Player player;
+    private String vuMark;
+    private String enemyVuMark;
+    private int kills;
+    private int ammunition;
+
+    public DatabaseReference getPlayersRef() {
+        return playersRef;
+    }
+
+    public void setEnemyVuMark(String enemyVuMark) {
+        this.enemyVuMark = enemyVuMark;
+    }
 
     SampleApplicationSession vuforiaAppSession;
 
@@ -83,7 +113,6 @@ public class TapAR extends Activity implements
 
     LoadingDialogHandler loadingDialogHandler = new LoadingDialogHandler(this);
 
-    private View _viewCard;
     private TextView _textValue;
     private ImageView _instanceImageView;
 
@@ -101,6 +130,12 @@ public class TapAR extends Activity implements
         Log.d(LOGTAG, "onCreate");
         super.onCreate(savedInstanceState);
 
+        playersRef = FirebaseDatabase.getInstance().getReference().child("players");
+        vuMark = getIntent().getStringExtra(KEY_VUMARK);
+        player = new Player(getIntent().getStringExtra(KEY_NAME));
+        playersRef.child(vuMark).setValue(player);
+        initPlayerListener();
+
         vuforiaAppSession = new SampleApplicationSession(this);
 
         startLoadingAnimation();
@@ -116,26 +151,31 @@ public class TapAR extends Activity implements
 
         mIsDroidDevice = Build.MODEL.toLowerCase().startsWith(
                 "droid");
+    }
 
-        ViewGroup.LayoutParams layoutParamsControl = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        LayoutInflater inflater = getLayoutInflater();
-        _viewCard = inflater.inflate(R.layout.card, null);
-        _viewCard.setVisibility(View.INVISIBLE);
-        LinearLayout cardLayout = (LinearLayout) _viewCard.findViewById(R.id.card_layout);
-
-        cardLayout.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    hideCard();
-                    return true;
+    private void initPlayerListener() {
+        playerListener = playersRef.child(vuMark).child("health").
+                addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int health = dataSnapshot.getValue(Integer.class);
+                if (health <= 0) {
+                    playersRef.child(vuMark).child("health")
+                            .removeEventListener(playerListener);
+                    playersRef.child(vuMark).removeValue();
+                    finish();
                 }
-                return false;
             }
-        });
-        addContentView(_viewCard, layoutParamsControl);
 
-        _textValue = (TextView) _viewCard.findViewById(R.id.text_value);
-        _instanceImageView = (ImageView) _viewCard.findViewById(R.id.instance_image);
+            @Override
+            public void onCancelled(DatabaseError databaseError) {}
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        playersRef.child(vuMark).removeValue();
+        super.onBackPressed();
     }
 
     // Process Single Tap event to trigger autofocus
@@ -178,7 +218,6 @@ public class TapAR extends Activity implements
             return true;
         }
     }
-
 
     // We want to load specific textures from the APK, which we will later use
     // for rendering.
@@ -305,50 +344,35 @@ public class TapAR extends Activity implements
         addContentView(mUILayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
 
-    }
-
-    void showCard(final String type, final String value, final Bitmap bitmap) {
-        final Context context = this;
-        runOnUiThread(new Runnable() {
+        Button btnAttack = mUILayout.findViewById(R.id.btnAttack);
+        btnAttack.setVisibility(View.VISIBLE);
+        btnAttack.setOnClickListener(
+                new View.OnClickListener() {
             @Override
-            public void run() {
-                // if scard is already visible with same VuMark, do nothing
-                if ((_viewCard.getVisibility() == View.VISIBLE) && (_textValue.getText().equals(value))) {
-                    return;
-                }
-                Animation bottomUp = AnimationUtils.loadAnimation(context,
-                        R.anim.bottom_up);
-
-                _textValue.setText(value);
-                if (bitmap != null) {
-                    _instanceImageView.setImageBitmap(bitmap);
-                }
-                _viewCard.bringToFront();
-                _viewCard.setVisibility(View.VISIBLE);
-                _viewCard.startAnimation(bottomUp);
-                // mUILayout.invalidate();
+            public void onClick(View view) {
+                Attack();
             }
         });
+
     }
 
-    void hideCard() {
-        final Context context = this;
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                // if card not visible, do nothing
-                if (_viewCard.getVisibility() != View.VISIBLE) {
-                    return;
-                }
-                _textValue.setText("");
-                Animation bottomDown = AnimationUtils.loadAnimation(context,
-                        R.anim.bottom_down);
+    private void Attack() {
+        if (enemyVuMark == null) return;
+        playersRef.child(enemyVuMark).child("health").
+                addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        int health = dataSnapshot.getValue(Integer.class);
+                        health -= 5;
+                        if (health <= 0) {
+                            kills++;
+                        }
+                        dataSnapshot.getRef().setValue(health);
+                    }
 
-                _viewCard.startAnimation(bottomDown);
-                _viewCard.setVisibility(View.INVISIBLE);
-                // mUILayout.invalidate();
-            }
-        });
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {}
+                });
     }
 
     // Methods to load and destroy tracking data.

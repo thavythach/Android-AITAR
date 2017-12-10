@@ -1,44 +1,43 @@
 package com.vuforia.samples.VuforiaSamples.ui.ActivityList;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.vuforia.samples.VuforiaSamples.R;
-import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
-import com.vuforia.samples.VuforiaSamples.app.VuMark.VuMark;
+import com.vuforia.samples.VuforiaSamples.data.User;
 import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard;
 import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentRanking;
 import com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentSettings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class ActivityUser extends AppCompatActivity {
-
-    public static final int REQUEST_CODE_VUMARK = 1001;
-    public static final String KEY_VUMARK = "KEY_VUMARK";
 
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
 
-    private String vuMarkStr;
+    private DatabaseReference usersRef;
+    private User user;
 
-    public String getVuMarkStr() {
-        return vuMarkStr;
+    public User getUser() {
+        return user;
     }
 
-    public void setVuMarkStr(String vuMarkStr) {
-        this.vuMarkStr = vuMarkStr;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -67,8 +66,21 @@ public class ActivityUser extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
 
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_dashboard);
+        usersRef = FirebaseDatabase.getInstance().getReference().child("users");
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        usersRef.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                user = (User) dataSnapshot.getValue(User.class);
+                navigation.setOnNavigationItemSelectedListener(
+                        mOnNavigationItemSelectedListener);
+                navigation.setSelectedItemId(R.id.navigation_dashboard);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                finish();
+            }
+        });
     }
 
     public void showFragment(String fragmentTag) {

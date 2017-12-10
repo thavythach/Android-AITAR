@@ -7,6 +7,11 @@ import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.Log;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.vuforia.CameraCalibration;
 import com.vuforia.CameraDevice;
 import com.vuforia.Device;
@@ -35,6 +40,7 @@ import com.vuforia.samples.SampleApplication.utils.SampleUtils;
 import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.Plane;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
+import com.vuforia.samples.VuforiaSamples.data.Player;
 
 import java.math.BigInteger;
 import java.nio.Buffer;
@@ -83,6 +89,8 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     // ratio to apply so that the augmentation surrounds the vumark
     private static final float VUMARK_SCALE = 1.02f;
     private String currentVumarkIdOnCard;
+
+    private int enemyHealth = 0;
 
     // attributes of health bar line
     static float HB_ORIGIN[] = {0.0f, 3.0f};
@@ -370,30 +378,36 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
                     Image instanceImage = vmTgt.getInstanceImage();
                     markerBitmap = getBitMapFromImage(instanceImage);
 
+                    getEnemyHealth(markerValue);
+
                     GLES20.glUseProgram(hbShaderProgramID);
 
                     float hbVertices[] = new float[12];
-                    hbVertices[0] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    float portion = (float) enemyHealth / Player.MAX_HEALTH;
+                    hbVertices[0] = HB_ORIGIN[0] - HB_LENGTH/2 * portion;
                     hbVertices[1] = HB_ORIGIN[1] - HB_WIDTH/2;
                     hbVertices[2] = 0.0f;
-                    hbVertices[3] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[3] = HB_ORIGIN[0] + HB_LENGTH/2 * portion;
                     hbVertices[4] = HB_ORIGIN[1] - HB_WIDTH/2;
                     hbVertices[5] = 0.0f;
-                    hbVertices[6] = HB_ORIGIN[0] + HB_LENGTH/2;
+                    hbVertices[6] = HB_ORIGIN[0] + HB_LENGTH/2 * portion;
                     hbVertices[7] = HB_ORIGIN[1] + HB_WIDTH/2;
                     hbVertices[8] = 0.0f;
-                    hbVertices[9] = HB_ORIGIN[0] - HB_LENGTH/2;
+                    hbVertices[9] = HB_ORIGIN[0] - HB_LENGTH/2 * portion;
                     hbVertices[10] = HB_ORIGIN[1] + HB_WIDTH/2;
                     hbVertices[11] = 0.0f;
 
                     GLES20.glVertexAttribPointer(hbVertexHandle, 3,
-                            GLES20.GL_FLOAT, false, 0, fillBuffer(hbVertices));
+                            GLES20.GL_FLOAT, false, 0,
+                            fillBuffer(hbVertices));
 
                     GLES20.glEnableVertexAttribArray(hbVertexHandle);
 
                     // set opacity and color of health bar
                     GLES20.glUniform1f(lineOpacityHandle, HB_OPACITY);
-                    GLES20.glUniform3f(lineColorHandle, 0.0f, 1.0f, 0.0f);
+                    GLES20.glUniform3f(lineColorHandle,
+                            Math.min(2.0f * (1.0f - portion), 1.0f),
+                            Math.min(2.0f * portion, 1.0f), 0.0f);
 
                     GLES20.glUniformMatrix4fv(hbMvpMatrixHandle, 1, false,
                             modelViewProjection, 0);
@@ -406,19 +420,16 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
 
                     if (! markerValue.equalsIgnoreCase(currentVumarkIdOnCard))
                     {
-                        mActivity.hideCard();
                         blinkVumark(true);
                     }
                 }
             }
-
         }
 
         if(gotVuMark)
         {
             // If we have a detection, let's make sure
             // the card is visible
-            mActivity.showCard(markerType, markerValue, markerBitmap);
             currentVumarkIdOnCard = markerValue;
         }
         else
@@ -429,11 +440,31 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
             // We also reset the value of the current value of the vumark on card
             // so that we hide and show the mumark if we redetect the same vumark instance
             currentVumarkIdOnCard = null;
+            mActivity.setEnemyVuMark(null);
+            enemyHealth = 0;
         }
         GLES20.glDisable(GLES20.GL_DEPTH_TEST);
         GLES20.glDisable(GLES20.GL_BLEND);
 
         mRenderer.end();
+    }
+
+    private void getEnemyHealth(final String vuMark) {
+        mActivity.getPlayersRef().child(vuMark).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    mActivity.setEnemyVuMark(vuMark);
+                    enemyHealth = dataSnapshot.getValue(Player.class).getHealth();
+                } else {
+                    mActivity.setEnemyVuMark(null);
+                    enemyHealth = 0;
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {}
+        });
     }
 
     private float distanceSquared(Vec2F p1, Vec2F p2)

@@ -57,6 +57,8 @@ import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser;
 
 import java.util.Vector;
 
+import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_VUMARK;
+
 
 public class VuMark extends Activity implements SampleApplicationControl
 {
@@ -131,7 +133,7 @@ public class VuMark extends Activity implements SampleApplicationControl
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.putExtra(ActivityUser.KEY_VUMARK, _textValue.getText().toString());
+                intent.putExtra(KEY_VUMARK, _textValue.getText().toString());
                 setResult(RESULT_OK, intent);
                 finish();
             }

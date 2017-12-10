@@ -153,11 +153,13 @@
         <activity
             android:name=".ui.ActivityList.ActivityLogin"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/Theme.AppCompat.Light"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ui.ActivityList.ActivityUser"
             android:label="@string/title_activity_user"
-            android:theme="@style/Theme.AppCompat.Light"></activity>
+            android:theme="@style/Theme.AppCompat.Light"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

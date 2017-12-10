@@ -57,7 +57,6 @@ public class ActivityLogin extends AppCompatActivity {
                         progressDialog.dismiss();
                         if (task.isSuccessful()) {
                             addUserToDatabase(task.getResult().getUser());
-
                             Toast.makeText(ActivityLogin.this,
                                     "Registration successful",
                                     Toast.LENGTH_SHORT).show();
@@ -71,11 +70,9 @@ public class ActivityLogin extends AppCompatActivity {
     }
 
     private void addUserToDatabase(final FirebaseUser fbUser) {
-        String key = FirebaseDatabase.getInstance().getReference().
-                child("users").push().getKey();
-        User newUser = new User(fbUser.getUid(), getNameFromEmail(fbUser.getEmail()));
+        User newUser = new User(getNameFromEmail(fbUser.getEmail()));
         FirebaseDatabase.getInstance().getReference().
-                child("users").child(key).setValue(newUser);
+                child("users").child(fbUser.getUid()).setValue(newUser);
     }
 
     @OnClick(R.id.btnLogin)
