@@ -51,6 +51,7 @@ import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapARRenderer;
 import com.vuforia.samples.VuforiaSamples.data.Player;
 import com.vuforia.samples.VuforiaSamples.data.User;
+import com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenu;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuGroup;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterface;
@@ -80,6 +81,7 @@ public class TapAR extends Activity implements
     private String enemyVuMark;
     private int kills;
     private int ammunition;
+    private HealthBarView cvHealthBar;
 
     public DatabaseReference getPlayersRef() {
         return playersRef;
@@ -323,7 +325,7 @@ public class TapAR extends Activity implements
 
     private void startLoadingAnimation()
     {
-        mUILayout = (RelativeLayout) View.inflate(this, R.layout.camera_overlay_reticle,
+        mUILayout = (RelativeLayout) View.inflate(this, R.layout.camera_overlay,
                 null);
 
         mUILayout.setVisibility(View.VISIBLE);
@@ -342,7 +344,6 @@ public class TapAR extends Activity implements
                 ViewGroup.LayoutParams.MATCH_PARENT));
 
         Button btnAttack = mUILayout.findViewById(R.id.btnAttack);
-        btnAttack.setVisibility(View.VISIBLE);
         btnAttack.setOnClickListener(
                 new View.OnClickListener() {
             @Override
@@ -350,6 +351,8 @@ public class TapAR extends Activity implements
                 Attack();
             }
         });
+
+        cvHealthBar = mUILayout.findViewById(R.id.cvHealthBar);
 
     }
 
