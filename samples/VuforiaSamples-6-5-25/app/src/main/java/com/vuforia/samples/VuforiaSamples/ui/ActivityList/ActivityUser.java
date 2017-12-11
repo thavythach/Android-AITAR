@@ -87,6 +87,7 @@ public class ActivityUser extends AppCompatActivity {
     }
 
     public void showFragment(String fragmentTag) {
+
         Fragment newFragment = getSupportFragmentManager().findFragmentByTag(fragmentTag);
         if (newFragment == null) {
             switch (fragmentTag) {
@@ -106,7 +107,6 @@ public class ActivityUser extends AppCompatActivity {
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fragmentContainer, newFragment, fragmentTag);
-        ft.addToBackStack("stack");
         ft.commit();
     }
 
