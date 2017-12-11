@@ -44,9 +44,13 @@ import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.data.Player;
 
+import com.vuforia.samples.VuforiaSamples.data.Types.Mage;
+import com.vuforia.samples.VuforiaSamples.data.Types.Ranger;
+import com.vuforia.samples.VuforiaSamples.data.Types.Warrior;
 import com.vuforia.samples.VuforiaSamples.data.User;
 import com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView;
 
+import java.util.Random;
 import java.util.Vector;
 
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_DEATHS;
@@ -121,7 +125,22 @@ public class TapAR extends Activity implements
 
         playersRef = FirebaseDatabase.getInstance().getReference().child("players");
         vuMark = getIntent().getStringExtra(KEY_VUMARK);
-        Player player = new Player(getIntent().getStringExtra(KEY_NAME));
+
+        // Player is randomly assigned a player type
+        Random rand = new Random();
+        Player player;
+        switch( rand.nextInt(3) ){
+            case 0:
+                player = new Mage(getIntent().getStringExtra(KEY_NAME));
+                break;
+            case 1:
+                player = new Ranger(getIntent().getStringExtra(KEY_NAME));
+                break;
+            default:
+                player = new Warrior(getIntent().getStringExtra(KEY_NAME));
+                break;
+        }
+
         playersRef.child(vuMark).setValue(player);
         createRestartDialog();
         initPlayerListener();
@@ -388,7 +407,10 @@ public class TapAR extends Activity implements
                             Player enemy = dataSnapshot.getValue(Player.class);
                             if (enemy.isAlive()) {
                                 int health = enemy.getHealth();
-                                health -= Player.ATTACK_DAMAGE;
+
+                                Random r = new Random();
+                                int randomDamage = r.nextInt(enemy.getMaxAttackDamage()-enemy.getMinAttackDamage()) + enemy.getMinAttackDamage();
+                                health -= randomDamage;
                                 if (health <= 0) {
                                     kills++;
                                 }
