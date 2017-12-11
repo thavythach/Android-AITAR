@@ -158,7 +158,7 @@ public class TapAR extends Activity implements
                 addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
+                if (dataSnapshot.exists() ){
                     int health = dataSnapshot.getValue(Integer.class);
                     if (health <= 0) {
                         playersRef.child(vuMark).child("health")
