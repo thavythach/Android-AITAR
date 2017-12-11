@@ -158,12 +158,14 @@ public class TapAR extends Activity implements
                 addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                int health = dataSnapshot.getValue(Integer.class);
-                if (health <= 0) {
-                    playersRef.child(vuMark).child("health")
-                            .removeEventListener(playerListener);
-                    playersRef.child(vuMark).removeValue();
-                    finish();
+                if (dataSnapshot.exists() ){
+                    int health = dataSnapshot.getValue(Integer.class);
+
+                    if (health <= 0) {
+                        playersRef.child(vuMark).child("health")
+                                .removeEventListener(playerListener);
+                        finish();
+                    }
                 }
             }
 
@@ -171,13 +173,7 @@ public class TapAR extends Activity implements
             public void onCancelled(DatabaseError databaseError) {}
         });
     }
-
-    @Override
-    public void onBackPressed() {
-        playersRef.child(vuMark).removeValue();
-        super.onBackPressed();
-    }
-
+    
     // Process Single Tap event to trigger autofocus
     private class GestureListener extends
             GestureDetector.SimpleOnGestureListener
@@ -297,6 +293,9 @@ public class TapAR extends Activity implements
         {
             Log.e(LOGTAG, e.getString());
         }
+
+        playersRef.child(vuMark).removeValue();
+
 
         // Unload texture:
         mTextures.clear();
