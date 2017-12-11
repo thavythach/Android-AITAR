@@ -18,7 +18,6 @@ import com.vuforia.samples.VuforiaSamples.data.Player;
 public class HealthBarView extends View {
 
     private int health;
-    private String name;
 
     private Paint paintBg;
     private Paint paintFg;
@@ -52,9 +51,14 @@ public class HealthBarView extends View {
 
         canvas.drawRect(0, 0, getWidth(), getHeight(), paintBg);
         float portion = (float) health / Player.MAX_HEALTH;
-        paintFg.setColor(Color.rgb(1, 1, 1));
+        paintFg.setColor(Color.rgb(
+                (int) (Math.min(2.0f * (1.0f - portion), 1.0f) * 100),
+                (int) (Math.min(2.0f * portion, 1.0f) * 100), 0));
         canvas.drawRect(0, 0, portion * getWidth(), getHeight(), paintFg);
+    }
 
-        canvas.drawText("HELLO", 30, 200, paintText);
+    public void setHealth(int health) {
+        this.health = Math.max(health, 0);
+        invalidate();
     }
 }
