@@ -3,6 +3,8 @@ package com.vuforia.samples.VuforiaSamples.ui.ActivityList;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +28,9 @@ import butterknife.OnClick;
 
 public class ActivityLogin extends AppCompatActivity {
 
+    private static final String KEY_EMAIL = "KEY_EMAIL";
+    private static final String KEY_PASSWORD = "KEY_PASSWORD";
+
     @BindView(R.id.etEmail)
     EditText etEmail;
     @BindView(R.id.etPassword)
@@ -41,6 +46,15 @@ public class ActivityLogin extends AppCompatActivity {
         ButterKnife.bind(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        SharedPreferences sp =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        String email = sp.getString(KEY_EMAIL, null);
+        String password = sp.getString(KEY_PASSWORD, null);
+        if (email != null && password != null) {
+            etEmail.setText(email);
+            etPassword.setText(password);
+        }
     }
 
     @OnClick(R.id.btnRegister)
@@ -80,8 +94,14 @@ public class ActivityLogin extends AppCompatActivity {
         if (!isFormValid()) {
             return;
         }
-
         showProgressDialog();
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor edit = sp.edit();
+        edit.putString(KEY_EMAIL, etEmail.getText().toString());
+        edit.putString(KEY_PASSWORD, etPassword.getText().toString());
+        edit.apply();
+
         firebaseAuth.signInWithEmailAndPassword(
                 etEmail.getText().toString(),
                 etPassword.getText().toString()

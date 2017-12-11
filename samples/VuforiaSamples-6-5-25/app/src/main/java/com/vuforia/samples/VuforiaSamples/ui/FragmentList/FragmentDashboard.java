@@ -3,9 +3,11 @@ package com.vuforia.samples.VuforiaSamples.ui.FragmentList;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -58,6 +60,8 @@ public class FragmentDashboard extends Fragment {
     public static final String KEY_KILLS = "KEY_KILLS";
     public static final String KEY_DEATHS = "KEY_DEATHS";
 
+    @BindView(R.id.btnMark)
+    Button btnMark;
     @BindView(R.id.btnStart)
     Button btnStart;
     @BindView(R.id.pcStats)
@@ -73,10 +77,15 @@ public class FragmentDashboard extends Fragment {
         View viewRoot = inflater.inflate(R.layout.fragment_dashboard, container, false);
         ButterKnife.bind(this, viewRoot);
 
+        SharedPreferences sp =
+                PreferenceManager.getDefaultSharedPreferences(getContext());
+        String vuMark = sp.getString(KEY_VUMARK, null);
+
         if (vuMark == null) {
             btnStart.setVisibility(View.GONE);
         } else {
-
+            this.vuMark = vuMark;
+            btnMark.setText("Current Marker: " + vuMark);
         }
 
         user = ((ActivityUser) getActivity()).getUser();
@@ -110,7 +119,12 @@ public class FragmentDashboard extends Fragment {
             if (resultCode == RESULT_OK) {
                 String vuMarkStr = data.getStringExtra(KEY_VUMARK);
                 vuMark = vuMarkStr;
+                btnMark.setText("Current Marker: " + vuMarkStr);
                 btnStart.setVisibility(View.VISIBLE);
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+                SharedPreferences.Editor edit = sp.edit();
+                edit.putString(KEY_VUMARK, vuMarkStr);
+                edit.apply();
             }
         } else if (requestCode == REQUEST_CODE_TAPAR) {
             if (resultCode == RESULT_OK) {
@@ -150,7 +164,7 @@ public class FragmentDashboard extends Fragment {
         pcStats.setCenterText(user.getName());
         pcStats.setCenterTextSize(20);
         pcStats.setDrawEntryLabels(true);
-        pcStats.setEntryLabelTextSize(20);
+        pcStats.setEntryLabelTextSize(16);
 
         Description desc = new Description();
         desc.setText("");
