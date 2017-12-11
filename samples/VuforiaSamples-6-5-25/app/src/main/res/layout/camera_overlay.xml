@@ -17,18 +17,31 @@
                             android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingLeft="10dp"
                             android:hint="Name of User"
                             android:layout_alignParentLeft="true"
                             />
 
-                        <TextView
-                            android:id="@+id/tvClassType"
-                            android:paddingRight="10dp"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="Class Type"
-                            android:layout_alignParentRight="true"/>
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:id="@+id/imClassType"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/aitar_logo"/>
+
+                                <TextView
+                                    android:id="@+id/tvClassType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Class Type"
+                                    />
+
+                        </LinearLayout>
+
 
                 </RelativeLayout>
 
@@ -49,12 +62,14 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnAttack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="Attack"/>
-        
+            android:src="@drawable/warrior_weapon"
+            />
+
+
 </RelativeLayout>

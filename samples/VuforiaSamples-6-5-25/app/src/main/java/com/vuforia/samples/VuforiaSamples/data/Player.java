@@ -1,5 +1,7 @@
 package com.vuforia.samples.VuforiaSamples.data;
 
+import com.vuforia.samples.VuforiaSamples.R;
+
 /**
  * Created by Steven Ye on 12/6/2017.
  */
@@ -33,6 +35,38 @@ public class Player {
                 break;
             default:
                 type = "Warrior";
+                break;
+        }
+        return type;
+    }
+
+    public int getDrawableWeapon(){
+        int type;
+        switch (this.type){
+            case 0:
+                type = R.drawable.mage_weapon;
+                break;
+            case 1:
+                type = R.drawable.ranger_weapon;
+                break;
+            default:
+                type = R.drawable.warrior_weapon;
+                break;
+        }
+        return type;
+    }
+
+    public int getDrawableWeaponIcon(){
+        int type;
+        switch (this.type){
+            case 0:
+                type = R.drawable.mage_icon;
+                break;
+            case 1:
+                type = R.drawable.ranger_icon;
+                break;
+            default:
+                type = R.drawable.warrior_icon;
                 break;
         }
         return type;

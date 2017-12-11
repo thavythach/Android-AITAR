@@ -111,9 +111,10 @@ public class TapAR extends Activity implements
 
     boolean mIsDroidDevice = false;
 
-    Button btnAttack;
+    ImageView btnAttack;
     TextView tvName;
     TextView tvClassType;
+    ImageView imClassType;
 
 
     // Called when the activity first starts or the user navigates back to an
@@ -172,6 +173,8 @@ public class TapAR extends Activity implements
                     cvHealthBar.setHealth(player.getHealth());
                     tvName.setText(player.getName());
                     tvClassType.setText(player.getStringType());
+                    imClassType.setImageResource(player.getDrawableWeaponIcon());
+                    btnAttack.setImageResource(player.getDrawableWeapon());
                     if (player.getHealth() <= 0) {
                         deaths++;
                         playersRef.removeEventListener(playerListener);
@@ -393,6 +396,7 @@ public class TapAR extends Activity implements
         cvHealthBar = mUILayout.findViewById(R.id.cvHealthBar);
         tvName = mUILayout.findViewById(R.id.tvName);
         tvClassType = mUILayout.findViewById(R.id.tvClassType);
+        imClassType = mUILayout.findViewById(R.id.imClassType);
     }
 
     private void Attack() {
