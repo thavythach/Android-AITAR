@@ -4,11 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-        <com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView
-            android:id="@+id/cvHealthBar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_alignParentTop="true" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:hint="Name of User"
+                            android:layout_alignParentLeft="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvClassType"
+                            android:paddingRight="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Class Type"
+                            android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView
+                    android:id="@+id/cvHealthBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true" />
+
+        </LinearLayout>
+
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar"

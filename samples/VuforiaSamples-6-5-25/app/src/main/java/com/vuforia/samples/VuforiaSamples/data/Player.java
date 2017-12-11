@@ -22,6 +22,30 @@ public class Player {
 
     public Player() {}
 
+    public String getStringType(){
+        String type;
+        switch (this.type){
+            case 0:
+                type = "Mage";
+                break;
+            case 1:
+                type = "Ranger";
+                break;
+            default:
+                type = "Warrior";
+                break;
+        }
+        return type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     public Player(String name, int health, boolean alive, int minAttackDamage, int maxAttackDamage, int type){
         this.name = name;
         this.health = health;

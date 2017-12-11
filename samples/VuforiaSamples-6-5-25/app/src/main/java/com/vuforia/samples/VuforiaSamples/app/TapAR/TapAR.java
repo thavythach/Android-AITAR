@@ -111,6 +111,10 @@ public class TapAR extends Activity implements
 
     boolean mIsDroidDevice = false;
 
+    Button btnAttack;
+    TextView tvName;
+    TextView tvClassType;
+
 
     // Called when the activity first starts or the user navigates back to an
     // activity.
@@ -159,14 +163,16 @@ public class TapAR extends Activity implements
     }
 
     private void initPlayerListener() {
-        playerListener = playersRef.child(vuMark).child("health").
+        playerListener = playersRef.child(vuMark).
                 addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    int health = dataSnapshot.getValue(Integer.class);
-                    cvHealthBar.setHealth(health);
-                    if (health <= 0) {
+                    Player player = dataSnapshot.getValue(Player.class);
+                    cvHealthBar.setHealth(player.getHealth());
+                    tvName.setText(player.getName());
+                    tvClassType.setText(player.getStringType());
+                    if (player.getHealth() <= 0) {
                         deaths++;
                         playersRef.removeEventListener(playerListener);
                         playersRef.child(vuMark).child("alive").setValue(false);
@@ -375,7 +381,7 @@ public class TapAR extends Activity implements
         addContentView(mUILayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
 
-        Button btnAttack = mUILayout.findViewById(R.id.btnAttack);
+        btnAttack = mUILayout.findViewById(R.id.btnAttack);
         btnAttack.setOnClickListener(
                 new View.OnClickListener() {
             @Override
@@ -385,6 +391,8 @@ public class TapAR extends Activity implements
         });
 
         cvHealthBar = mUILayout.findViewById(R.id.cvHealthBar);
+        tvName = mUILayout.findViewById(R.id.tvName);
+        tvClassType = mUILayout.findViewById(R.id.tvClassType);
     }
 
     private void Attack() {
