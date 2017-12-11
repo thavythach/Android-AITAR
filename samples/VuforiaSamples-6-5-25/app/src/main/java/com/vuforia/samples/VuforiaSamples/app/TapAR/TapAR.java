@@ -162,6 +162,7 @@ public class TapAR extends Activity implements
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists() ){
                     int health = dataSnapshot.getValue(Integer.class);
+                    cvHealthBar.setHealth(health);
                     if (health <= 0) {
                         playersRef.child(vuMark).child("health")
                                 .removeEventListener(playerListener);
@@ -353,7 +354,6 @@ public class TapAR extends Activity implements
         });
 
         cvHealthBar = mUILayout.findViewById(R.id.cvHealthBar);
-
     }
 
     private void Attack() {
