@@ -93,7 +93,7 @@ public class TapARRenderer implements GLSurfaceView.Renderer, SampleAppRendererC
     private int enemyHealth = 0;
 
     // attributes of health bar line
-    static float HB_ORIGIN[] = {0.0f, 3.0f};
+    static float HB_ORIGIN[] = {0.0f, 1.5f};
     static float HB_LENGTH = 1.2f;
     static float HB_WIDTH = 0.2f;
     static float HB_OPACITY = 0.6f;

@@ -2,26 +2,20 @@ package com.vuforia.samples.VuforiaSamples.app.TapAR;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.GestureDetector;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -47,19 +41,9 @@ import com.vuforia.samples.SampleApplication.utils.LoadingDialogHandler;
 import com.vuforia.samples.SampleApplication.utils.SampleApplicationGLView;
 import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.R;
-import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
-import com.vuforia.samples.VuforiaSamples.app.TapAR.TapARRenderer;
 import com.vuforia.samples.VuforiaSamples.data.Player;
-import com.vuforia.samples.VuforiaSamples.data.User;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenu;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuGroup;
-import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterface;
 
-import java.util.EventListener;
 import java.util.Vector;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_NAME;
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_VUMARK;
@@ -69,7 +53,7 @@ import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboa
  */
 
 public class TapAR extends Activity implements
-        SampleApplicationControl, SampleAppMenuInterface {
+        SampleApplicationControl {
 
     private static final String LOGTAG = "TapAR";
 
@@ -108,8 +92,6 @@ public class TapAR extends Activity implements
     private boolean mExtendedTracking = false;
 
     private RelativeLayout mUILayout;
-
-    private SampleAppMenu mSampleAppMenu;
 
     LoadingDialogHandler loadingDialogHandler = new LoadingDialogHandler(this);
 
@@ -466,9 +448,6 @@ public class TapAR extends Activity implements
 
             vuforiaAppSession.startAR(CameraDevice.CAMERA_DIRECTION.CAMERA_DIRECTION_DEFAULT);
 
-            mSampleAppMenu = new SampleAppMenu(this, this, "VuMark",
-                    mGlView, mUILayout, null);
-            setSampleAppMenuSettings();
 
         } else
         {
@@ -628,92 +607,10 @@ public class TapAR extends Activity implements
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        // Process the Gestures
-        if (mSampleAppMenu != null && mSampleAppMenu.processEvent(event))
-            return true;
 
         return mGestureDetector.onTouchEvent(event);
     }
 
 
-    boolean isExtendedTrackingActive()
-    {
-        return mExtendedTracking;
-    }
-
-    final public static int CMD_BACK = -1;
-    final public static int CMD_EXTENDED_TRACKING = 1;
-
-    // This method sets the menu's settings
-    private void setSampleAppMenuSettings()
-    {
-        SampleAppMenuGroup group;
-
-        group = mSampleAppMenu.addGroup("", false);
-        group.addTextItem(getString(R.string.menu_back), -1);
-
-        group = mSampleAppMenu.addGroup("", true);
-        group.addSelectionItem(getString(R.string.menu_extended_tracking),
-                CMD_EXTENDED_TRACKING, false);
-
-        mSampleAppMenu.attachMenu();
-    }
-
-
-    @Override
-    public boolean menuProcess(int command)
-    {
-
-        boolean result = true;
-
-        switch (command)
-        {
-            case CMD_BACK:
-                finish();
-                break;
-
-            case CMD_EXTENDED_TRACKING:
-                for (int tIdx = 0; tIdx < mCurrentDataset.getNumTrackables(); tIdx++)
-                {
-                    Trackable trackable = mCurrentDataset.getTrackable(tIdx);
-
-                    if (!mExtendedTracking)
-                    {
-                        if (!trackable.startExtendedTracking())
-                        {
-                            Log.e(LOGTAG,
-                                    "Failed to start extended tracking target");
-                            result = false;
-                        } else
-                        {
-                            Log.d(LOGTAG,
-                                    "Successfully started extended tracking target");
-                        }
-                    } else
-                    {
-                        if (!trackable.stopExtendedTracking())
-                        {
-                            Log.e(LOGTAG,
-                                    "Failed to stop extended tracking target");
-                            result = false;
-                        } else
-                        {
-                            Log.d(LOGTAG,
-                                    "Successfully started extended tracking target");
-                        }
-                    }
-                }
-
-                if (result)
-                    mExtendedTracking = !mExtendedTracking;
-
-                break;
-
-            default:
-                break;
-        }
-
-        return result;
-    }
 
 }
