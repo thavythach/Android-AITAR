@@ -7,6 +7,7 @@ package com.vuforia.samples.VuforiaSamples.data;
 public class Player {
 
     public static final int MAX_HEALTH = 100;
+    public static final int ATTACK_DAMAGE = 5;
 
     private String name;
     private int health;

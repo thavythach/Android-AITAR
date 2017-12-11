@@ -43,6 +43,9 @@ import com.vuforia.samples.SampleApplication.utils.Texture;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.data.Player;
 
+import com.vuforia.samples.VuforiaSamples.data.User;
+import com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView;
+
 import java.util.Vector;
 
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_NAME;
@@ -64,6 +67,7 @@ public class TapAR extends Activity implements
     private String enemyVuMark;
     private int kills;
     private int ammunition;
+    private HealthBarView cvHealthBar;
 
     public DatabaseReference getPlayersRef() {
         return playersRef;
@@ -142,7 +146,6 @@ public class TapAR extends Activity implements
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists() ){
                     int health = dataSnapshot.getValue(Integer.class);
-
                     if (health <= 0) {
                         playersRef.child(vuMark).child("health")
                                 .removeEventListener(playerListener);
@@ -155,7 +158,7 @@ public class TapAR extends Activity implements
             public void onCancelled(DatabaseError databaseError) {}
         });
     }
-    
+
     // Process Single Tap event to trigger autofocus
     private class GestureListener extends
             GestureDetector.SimpleOnGestureListener
@@ -278,7 +281,6 @@ public class TapAR extends Activity implements
 
         playersRef.child(vuMark).removeValue();
 
-
         // Unload texture:
         mTextures.clear();
         mTextures = null;
@@ -307,7 +309,7 @@ public class TapAR extends Activity implements
 
     private void startLoadingAnimation()
     {
-        mUILayout = (RelativeLayout) View.inflate(this, R.layout.camera_overlay_reticle,
+        mUILayout = (RelativeLayout) View.inflate(this, R.layout.camera_overlay,
                 null);
 
         mUILayout.setVisibility(View.VISIBLE);
@@ -326,7 +328,6 @@ public class TapAR extends Activity implements
                 ViewGroup.LayoutParams.MATCH_PARENT));
 
         Button btnAttack = mUILayout.findViewById(R.id.btnAttack);
-        btnAttack.setVisibility(View.VISIBLE);
         btnAttack.setOnClickListener(
                 new View.OnClickListener() {
             @Override
@@ -334,6 +335,8 @@ public class TapAR extends Activity implements
                 Attack();
             }
         });
+
+        cvHealthBar = mUILayout.findViewById(R.id.cvHealthBar);
 
     }
 
@@ -344,7 +347,7 @@ public class TapAR extends Activity implements
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         int health = dataSnapshot.getValue(Integer.class);
-                        health -= 5;
+                        health -= Player.ATTACK_DAMAGE;
                         if (health <= 0) {
                             kills++;
                         }
