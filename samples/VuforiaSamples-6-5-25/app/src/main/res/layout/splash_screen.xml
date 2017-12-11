@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/vuforia_splash"
+		android:src="@drawable/vuforia_splash"
         android:contentDescription="@string/splash_screen_description"
         />
 
@@ -37,7 +37,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:scaleType="centerInside"
-				android:src="@drawable/logo"
+				android:src="@drawable/aitar"
 				android:contentDescription="@string/splash_screen_description"
 				/>
 
