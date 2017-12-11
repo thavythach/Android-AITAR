@@ -1,5 +1,7 @@
 package com.vuforia.samples.VuforiaSamples.ui.FragmentList;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import com.vuforia.samples.VuforiaSamples.Manifest;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 import com.vuforia.samples.VuforiaSamples.app.VuMark.VuMark;
+import com.vuforia.samples.VuforiaSamples.data.Player;
 import com.vuforia.samples.VuforiaSamples.data.User;
 import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUser;
 

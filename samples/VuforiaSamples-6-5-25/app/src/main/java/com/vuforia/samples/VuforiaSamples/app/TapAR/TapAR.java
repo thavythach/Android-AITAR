@@ -62,12 +62,12 @@ public class TapAR extends Activity implements
 
     private DatabaseReference playersRef;
     private ValueEventListener playerListener;
-    private Player player;
     private String vuMark;
     private String enemyVuMark;
     private int kills;
-    private int ammunition;
+    private int deaths;
     private HealthBarView cvHealthBar;
+    private AlertDialog restartDialog;
 
     public DatabaseReference getPlayersRef() {
         return playersRef;
@@ -118,8 +118,9 @@ public class TapAR extends Activity implements
 
         playersRef = FirebaseDatabase.getInstance().getReference().child("players");
         vuMark = getIntent().getStringExtra(KEY_VUMARK);
-        player = new Player(getIntent().getStringExtra(KEY_NAME));
+        Player player = new Player(getIntent().getStringExtra(KEY_NAME));
         playersRef.child(vuMark).setValue(player);
+        createRestartDialog();
         initPlayerListener();
 
         vuforiaAppSession = new SampleApplicationSession(this);
@@ -135,8 +136,7 @@ public class TapAR extends Activity implements
         mTextures = new Vector<Texture>();
         loadTextures();
 
-        mIsDroidDevice = Build.MODEL.toLowerCase().startsWith(
-                "droid");
+        mIsDroidDevice = Build.MODEL.toLowerCase().startsWith("droid");
     }
 
     private void initPlayerListener() {
@@ -144,13 +144,14 @@ public class TapAR extends Activity implements
                 addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists() ){
+                if (dataSnapshot.exists()) {
                     int health = dataSnapshot.getValue(Integer.class);
                     cvHealthBar.setHealth(health);
                     if (health <= 0) {
-                        playersRef.child(vuMark).child("health")
-                                .removeEventListener(playerListener);
-                        finish();
+                        deaths++;
+                        playersRef.removeEventListener(playerListener);
+                        playersRef.child(vuMark).child("alive").setValue(false);
+                        restartDialog.show();
                     }
                 }
             }
@@ -158,6 +159,33 @@ public class TapAR extends Activity implements
             @Override
             public void onCancelled(DatabaseError databaseError) {}
         });
+    }
+
+    private void createRestartDialog() {
+        restartDialog = new AlertDialog.Builder(this)
+                .setTitle("Game Over")
+                .setMessage("Would you like to respawn?")
+                .setPositiveButton(android.R.string.ok,
+                        new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        playersRef.child(vuMark).child("health").
+                                setValue(Player.MAX_HEALTH);
+                        playersRef.child(vuMark).child("alive").
+                                setValue(true);
+                        restartDialog.dismiss();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel,
+                        new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .create();
+        restartDialog.setCancelable(false);
+        restartDialog.setCanceledOnTouchOutside(false);
     }
 
     // Process Single Tap event to trigger autofocus
@@ -342,16 +370,21 @@ public class TapAR extends Activity implements
 
     private void Attack() {
         if (enemyVuMark == null) return;
-        playersRef.child(enemyVuMark).child("health").
+        playersRef.child(enemyVuMark).
                 addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        int health = dataSnapshot.getValue(Integer.class);
-                        health -= Player.ATTACK_DAMAGE;
-                        if (health <= 0) {
-                            kills++;
+                        if (dataSnapshot.exists()) {
+                            Player enemy = dataSnapshot.getValue(Player.class);
+                            if (enemy.isAlive()) {
+                                int health = enemy.getHealth();
+                                health -= Player.ATTACK_DAMAGE;
+                                if (health <= 0) {
+                                    kills++;
+                                }
+                                dataSnapshot.getRef().child("health").setValue(health);
+                            }
                         }
-                        dataSnapshot.getRef().setValue(health);
                     }
 
                     @Override

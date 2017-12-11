@@ -11,12 +11,14 @@ public class Player {
 
     private String name;
     private int health;
+    private boolean alive;
 
     public Player() {}
 
     public Player(String name) {
         this.name = name;
         this.health = MAX_HEALTH;
+        this.alive = true;
     }
 
     public String getName() {
@@ -33,5 +35,13 @@ public class Player {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 }
