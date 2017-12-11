@@ -3,6 +3,7 @@ package com.vuforia.samples.VuforiaSamples.app.TapAR;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -52,6 +53,8 @@ import com.vuforia.samples.VuforiaSamples.ui.CustomViewList.HealthBarView;
 import java.util.Random;
 import java.util.Vector;
 
+import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_DEATHS;
+import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_KILLS;
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_NAME;
 import static com.vuforia.samples.VuforiaSamples.ui.FragmentList.FragmentDashboard.KEY_VUMARK;
 
@@ -68,8 +71,8 @@ public class TapAR extends Activity implements
     private ValueEventListener playerListener;
     private String vuMark;
     private String enemyVuMark;
-    private int kills;
-    private int deaths;
+    private int kills = 0;
+    private int deaths = 0;
     private HealthBarView cvHealthBar;
     private AlertDialog restartDialog;
 
@@ -320,6 +323,15 @@ public class TapAR extends Activity implements
         }
     }
 
+    @Override
+    public void finish() {
+        playersRef.child(vuMark).removeValue();
+        Intent intent = new Intent();
+        intent.putExtra(KEY_KILLS, kills);
+        intent.putExtra(KEY_DEATHS, deaths);
+        setResult(RESULT_OK, intent);
+        super.finish();
+    }
 
     // The final call you receive before your activity is destroyed.
     @Override
@@ -335,8 +347,6 @@ public class TapAR extends Activity implements
         {
             Log.e(LOGTAG, e.getString());
         }
-
-        playersRef.child(vuMark).removeValue();
 
         // Unload texture:
         mTextures.clear();
