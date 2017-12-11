@@ -10,9 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-		android:src="@drawable/vuforia_splash"
-        android:contentDescription="@string/splash_screen_description"
-        />
+		android:background="#000"
+        android:contentDescription="@string/splash_screen_description"/>
 
     <LinearLayout
 	        android:layout_width="match_parent"
