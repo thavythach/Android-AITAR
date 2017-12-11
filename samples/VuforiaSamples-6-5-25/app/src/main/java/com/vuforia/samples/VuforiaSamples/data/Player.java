@@ -2,6 +2,8 @@ package com.vuforia.samples.VuforiaSamples.data;
 
 import com.vuforia.samples.VuforiaSamples.R;
 
+import java.util.Random;
+
 /**
  * Created by Steven Ye on 12/6/2017.
  */
@@ -71,6 +73,8 @@ public class Player {
         }
         return type;
     }
+
+
 
     public int getType() {
         return type;
