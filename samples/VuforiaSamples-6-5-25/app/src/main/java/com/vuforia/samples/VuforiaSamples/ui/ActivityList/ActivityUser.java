@@ -32,14 +32,11 @@ public class ActivityUser extends AppCompatActivity {
     BottomNavigationView navigation;
 
     private DatabaseReference usersRef;
+    private String uid;
     private User user;
 
     public User getUser() {
         return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -69,11 +66,11 @@ public class ActivityUser extends AppCompatActivity {
         ButterKnife.bind(this);
 
         usersRef = FirebaseDatabase.getInstance().getReference().child("users");
-        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         usersRef.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                user = (User) dataSnapshot.getValue(User.class);
+                user = dataSnapshot.getValue(User.class);
                 navigation.setOnNavigationItemSelectedListener(
                         mOnNavigationItemSelectedListener);
                 navigation.setSelectedItemId(R.id.navigation_dashboard);
@@ -84,6 +81,10 @@ public class ActivityUser extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void updateUser(User user) {
+        usersRef.child(uid).setValue(user);
     }
 
     public void showFragment(String fragmentTag) {
