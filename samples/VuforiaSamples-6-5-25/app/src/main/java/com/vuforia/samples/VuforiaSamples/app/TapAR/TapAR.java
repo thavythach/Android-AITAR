@@ -15,6 +15,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -118,6 +120,7 @@ public class TapAR extends Activity implements
     TextView tvName;
     TextView tvClassType;
     ImageView imClassType;
+    TextView tvHealthBar;
 
 
     // Called when the activity first starts or the user navigates back to an
@@ -178,6 +181,7 @@ public class TapAR extends Activity implements
                     tvClassType.setText(player.getStringType());
                     imClassType.setImageResource(player.getDrawableWeaponIcon());
                     btnAttack.setImageResource(player.getDrawableWeapon());
+                    tvHealthBar.setText( player.getHealth() <= 0 ? "0/100" : player.getHealth() +"/100" );
                     if (player.getHealth() <= 0) {
                         deaths++;
                         playersRef.removeEventListener(playerListener);
@@ -235,7 +239,7 @@ public class TapAR extends Activity implements
                         playersRef.child(vuMark).child("minAttackDamage").setValue( minDmg );
                         playersRef.child(vuMark).child("maxAttackDamage").setValue( maxDmg );
 
-                        
+
                         restartDialog.dismiss();
                     }
                 })
@@ -439,6 +443,7 @@ public class TapAR extends Activity implements
         tvName = mUILayout.findViewById(R.id.tvName);
         tvClassType = mUILayout.findViewById(R.id.tvClassType);
         imClassType = mUILayout.findViewById(R.id.imClassType);
+        tvHealthBar = mUILayout.findViewById(R.id.tvHealthBar);
     }
 
     private void Attack() {
@@ -455,6 +460,8 @@ public class TapAR extends Activity implements
                                 Random r = new Random();
                                 int randomDamage = r.nextInt(enemy.getMaxAttackDamage()-enemy.getMinAttackDamage()) + enemy.getMinAttackDamage();
                                 health -= randomDamage;
+                                final Animation animAnticipateOvershoot = AnimationUtils.loadAnimation(TapAR.this, R.anim.anticipate_overshoot);
+                                imClassType.startAnimation(animAnticipateOvershoot);
                                 if (health <= 0) {
                                     kills++;
                                 }
