@@ -1,15 +1,19 @@
 package com.vuforia.samples.VuforiaSamples.ui.FragmentList;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.vuforia.samples.VuforiaSamples.Manifest;
 import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.app.TapAR.TapAR;
 import com.vuforia.samples.VuforiaSamples.app.VuMark.VuMark;
@@ -64,6 +68,11 @@ public class FragmentDashboard extends Fragment {
         tvName.setText(user.getName());
         tvKills.setText(String.valueOf(user.getKills()));
         tvDeaths.setText(String.valueOf(user.getDeaths()));
+
+        if(ContextCompat.checkSelfPermission(getContext(),android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
+        ContextCompat.checkSelfPermission(getContext(),android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+        }
 
         return viewRoot;
     }
