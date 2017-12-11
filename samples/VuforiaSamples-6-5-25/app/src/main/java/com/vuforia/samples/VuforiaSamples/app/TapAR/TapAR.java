@@ -158,24 +158,19 @@ public class TapAR extends Activity implements
                 addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                int health = dataSnapshot.getValue(Integer.class);
-                if (health <= 0) {
-                    playersRef.child(vuMark).child("health")
-                            .removeEventListener(playerListener);
-                    playersRef.child(vuMark).removeValue();
-                    finish();
+                if (dataSnapshot.exists()) {
+                    int health = dataSnapshot.getValue(Integer.class);
+                    if (health <= 0) {
+                        playersRef.child(vuMark).child("health")
+                                .removeEventListener(playerListener);
+                        finish();
+                    }
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {}
         });
-    }
-
-    @Override
-    public void onBackPressed() {
-        playersRef.child(vuMark).removeValue();
-        super.onBackPressed();
     }
 
     // Process Single Tap event to trigger autofocus
@@ -298,6 +293,8 @@ public class TapAR extends Activity implements
             Log.e(LOGTAG, e.getString());
         }
 
+        playersRef.child(vuMark).removeValue();
+
         // Unload texture:
         mTextures.clear();
         mTextures = null;
@@ -363,7 +360,7 @@ public class TapAR extends Activity implements
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         int health = dataSnapshot.getValue(Integer.class);
-                        health -= 5;
+                        health -= Player.ATTACK_DAMAGE;
                         if (health <= 0) {
                             kills++;
                         }
