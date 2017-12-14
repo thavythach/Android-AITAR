@@ -8,8 +8,8 @@ import com.vuforia.samples.VuforiaSamples.data.Player;
 
 public class Ranger extends Player {
 
-    private static final int MIN_ATTACK_DAMAGE = 0;
-    private static final int MAX_ATTACK_DAMAGE = 23;
+    public static final int MIN_ATTACK_DAMAGE = 0;
+    public static final int MAX_ATTACK_DAMAGE = 23;
     private static final int CLASS_TYPE = 1;
 
     public Ranger(String name){
