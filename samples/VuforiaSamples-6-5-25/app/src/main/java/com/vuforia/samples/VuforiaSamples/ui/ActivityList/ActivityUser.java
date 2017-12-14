@@ -35,6 +35,10 @@ public class ActivityUser extends AppCompatActivity {
     private String uid;
     private User user;
 
+    public DatabaseReference getUsersRef() {
+        return usersRef;
+    }
+
     public User getUser() {
         return user;
     }
